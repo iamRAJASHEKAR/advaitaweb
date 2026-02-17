@@ -1,0 +1,32 @@
+.card--differentiator {
+  padding: 18px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.diff-icon {
+  font-size: 44px;
+  line-height: 1;
+}
+
+.diff-title {
+  margin: 0;
+  font-size: 17.6px;
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.diff-description {
+  margin: 0;
+  font-size: 15.2px;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+  .diff-icon {
+    font-size: 36px;
+  }
+}

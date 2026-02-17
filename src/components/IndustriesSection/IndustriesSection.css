@@ -1,0 +1,58 @@
+.grid--industry {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 20px;
+  min-width: 0;
+}
+
+.industry-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px;
+  min-width: 0;
+  background: var(--color-bg-light);
+  border: 1px solid var(--color-border-light);
+  border-radius: 12px;
+  text-align: center;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.industry-badge:hover {
+  border-color: var(--color-primary);
+  box-shadow: 0 4px 12px rgba(10, 37, 64, 0.1);
+  transform: translateY(-2px);
+}
+
+.industry-icon {
+  font-size: 36px;
+}
+
+.industry-name {
+  margin: 0;
+  font-size: 14.4px;
+  color: var(--color-text-primary);
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .grid--industry {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .industry-badge {
+    padding: 12px;
+  }
+
+  .industry-icon {
+    font-size: 28px;
+  }
+
+  .industry-name {
+    font-size: 12.8px;
+  }
+}

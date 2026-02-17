@@ -1,0 +1,774 @@
+{
+  "heroSlides": [
+    {
+      "id": "slide1",
+      "imageKey": "hero",
+      "title": "Your Trusted Partner for a Cleaner Tomorrow.",
+      "subtitle": "Delivering reliable, expert, and cost-effective Washroom, Cleaning, and Waste Management solutions."
+    },
+    {
+      "id": "slide2",
+      "imageKey": "housekeeping",
+      "title": "Dedicated to Your Business Growth.",
+      "subtitle": "The preferred source for cost-effective bulk supplies—serving Retailers, Distributors, Corporates, and Institutions."
+    }
+  ],
+  "trustMetrics": [
+    { "value": "15+", "label": "Years as wholesaler & distributor" },
+    { "value": "500+", "label": "Partners supplied (incl. institutions & corporate)" },
+    { "value": "98%", "label": "On-time dispatch performance" }
+  ],
+  "differentiators": [
+    {
+      "title": "On-Time Delivery",
+      "description": "Metro: 12-hour dispatch. Pan-India: 2-5 days delivery.",
+      "icon": "📦"
+    },
+    {
+      "title": "Standardized Quality",
+      "description": "ISO-certified manufacturing with regular compliance audits.",
+      "icon": "✓"
+    },
+    {
+      "title": "Bulk Order Flexibility",
+      "description": "Wholesale pricing tiers with MOQ support and steady availability.",
+      "icon": "🛠"
+    },
+    {
+      "title": "Procurement Support",
+      "description": "Single point of contact for quotes, lead times, and dispatch.",
+      "icon": "💬"
+    },
+    {
+      "title": "Transparent Pricing",
+      "description": "No middlemen. Direct manufacturer pricing with bulk discounts.",
+      "icon": "💰"
+    },
+    {
+      "title": "Compliance Ready",
+      "description": "ISO 9001, ISO 14001 certified. Audit reports included.",
+      "icon": "📋"
+    }
+  ],
+  "industries": [
+    { "name": "Corporate Offices", "icon": "🏢" },
+    { "name": "Hospitals & Clinics", "icon": "🏥" },
+    { "name": "Hotels & Hospitality", "icon": "🏨" },
+    { "name": "Educational Institutions", "icon": "🎓" },
+    { "name": "Manufacturing & Factories", "icon": "🏭" },
+    { "name": "Retail Chains", "icon": "🛍" },
+    { "name": "Government Facilities", "icon": "🏛" },
+    { "name": "Data Centers", "icon": "🖥" }
+  ],
+  "processSteps": [
+    {
+      "step": 1,
+      "title": "Share Product Requirements",
+      "description": "Tell us quantities, delivery location, and preferred brands."
+    },
+    {
+      "step": 2,
+      "title": "Receive Wholesale Quote",
+      "description": "Get pricing tiers, lead time, and dispatch plan in 24 hours."
+    },
+    {
+      "step": 3,
+      "title": "Confirm & Dispatch",
+      "description": "PO confirmation with fast pick-pack-ship execution."
+    },
+    {
+      "step": 4,
+      "title": "Replenishment Planning",
+      "description": "Repeat orders with predictable supply and reorder reminders."
+    }
+  ],
+  "categories": [
+    {
+      "id": "washroom",
+      "name": "Washroom Supply Systems",
+      "tagline": "Wholesale distributors of washroom solutions. Serving Retailers, Distributors, Corporate Offices, and Institutions.",
+      "items": [
+        "Tissue dispensers (C-fold, M-fold, JRT)",
+        "Soap & sanitizer dispensers (auto & manual)",
+        "Hand dryers (jet, compact, HEPA)",
+        "Air freshener systems"
+      ],
+      "lead": "Lead time: 3-5 days for standard orders",
+      "availability": "Wholesale pricing for bulk quantities"
+    },
+    {
+      "id": "waste",
+      "name": "Waste Management",
+      "tagline": "Wholesale distributors of waste management solutions. Serving Retailers, Distributors, Corporate Offices, and Institutions.",
+      "items": [
+        "Stainless steel dustbins & pedal bins",
+        "Touchless sensor bins",
+        "Bio-waste containers",
+        "Housekeeping trolleys & carts"
+      ],
+      "lead": "Lead time: 5-7 days for bulk orders",
+      "availability": "Premium-grade materials for all"
+    },
+    {
+      "id": "chemicals",
+      "name": "Cleaning & Chemicals",
+      "tagline": "Wholesale distributors of cleaning and chemical solutions. Serving Retailers, Distributors, Corporate Offices, and Institutions.",
+      "items": [
+        "Disinfectants (ISO & FSSAI approved)",
+        "Eco-friendly cleaning solutions",
+        "Floor care products",
+        "Surface sanitizers"
+      ],
+      "lead": "Lead time: 2-3 days stock availability",
+      "availability": "Bulk orders: custom packaging available"
+    }
+  ],
+  "products": [
+    {
+      "id": "60l-ss-dustbin",
+      "name": "60L Stainless Steel Dust Bin",
+      "categoryId": "waste",
+      "price": 2600,
+      "capacity": "60 Liters",
+      "material": "Stainless Steel",
+      "color": "Silver / Matte Black",
+      "structure": "Round Open Top",
+      "usage": "Outdoor, Office, Industrial",
+      "size": "14\" x 28\"",
+      "grade": "SS 304",
+      "finish": "Polished / Matte",
+      "description": "Premium 60-liter stainless steel dustbin designed for high-traffic commercial spaces. Built with corrosion-resistant SS 304 grade steel for long-lasting durability. Ideal for offices, hospitals, manufacturing facilities, and outdoor installations. Features a smooth polished finish that's easy to clean and maintain.",
+      "features": [
+        "Corrosion-resistant SS 304 grade construction",
+        "Scratch-proof rubber ring at the bottom",
+        "Easy-clean polished surface",
+        "Weather-resistant for outdoor use",
+        "Sturdy round design for stability",
+        "Suitable for high-traffic areas"
+      ],
+      "minimumOrder": 2
+    },
+    {
+      "id": "pedal-dustbin-25l",
+      "name": "Stainless Steel Pedal Waste Bin 25L",
+      "categoryId": "waste",
+      "price": 780,
+      "capacity": "25 Liters",
+      "material": "Stainless Steel",
+      "color": "Silver",
+      "structure": "Foot Pedal with Lid",
+      "usage": "Office, Hospital, Residential",
+      "size": "12\" x 18\"",
+      "grade": "SS 202",
+      "finish": "Polished",
+      "description": "Hygienic foot-pedal operated dustbin with smooth operation and durable construction. Perfect for environments requiring hands-free waste disposal. Features a tight-fitting lid to contain odors and maintain cleanliness.",
+      "features": [
+        "Hands-free foot pedal operation",
+        "Tight-fitting lid for odor control",
+        "SS 202 grade construction",
+        "Polished stainless steel finish",
+        "Non-slip rubber base",
+        "Easy to clean and maintain"
+      ],
+      "minimumOrder": 10
+    },
+    {
+      "id": "auto-foam-dispenser",
+      "name": "Auto Foam Soap Dispenser 1000ml",
+      "categoryId": "washroom",
+      "price": 2450,
+      "capacity": "1000 ml",
+      "sizes": ["500 ml", "1000 ml", "1200 ml"],
+      "material": "ABS + SS304 Nozzle",
+      "color": "White / Chrome",
+      "structure": "Wall Mount, Auto Sensor",
+      "usage": "Corporate, Hospitals, Hotels",
+      "size": "9\" x 5\" x 4\"",
+      "grade": "IPX4",
+      "finish": "Matte",
+      "description": "Touch-free foam dispenser with sealed cartridge system to reduce cross-contamination. Ideal for high-traffic washrooms requiring consistent dosing and low maintenance.",
+      "features": [
+        "Auto-sensor with controlled dosage",
+        "Sealed cartridge to minimize contamination",
+        "Low-battery indicator",
+        "Easy wall-mount installation",
+        "Suitable for high-traffic facilities"
+      ],
+      "minimumOrder": 10
+    },
+    {
+      "id": "jet-hand-dryer",
+      "name": "Jet Hand Dryer (HEPA)",
+      "categoryId": "washroom",
+      "price": 8200,
+      "capacity": "90 m/s air speed",
+      "material": "ABS",
+      "color": "White",
+      "structure": "Wall Mount",
+      "usage": "Office, Airport, Hotels",
+      "size": "12\" x 7\" x 9\"",
+      "grade": "HEPA H13",
+      "finish": "Matte",
+      "description": "High-velocity jet hand dryer with HEPA filtration for cleaner airflow and faster drying times, built for continuous commercial use.",
+      "features": [
+        "Fast 10-second dry time",
+        "HEPA H13 filtration",
+        "Energy efficient motor",
+        "Noise-dampening design",
+        "Overheat protection"
+      ],
+      "minimumOrder": 5
+    },
+    {
+      "id": "jrt-dispenser",
+      "name": "Jumbo Roll Tissue Dispenser",
+      "categoryId": "washroom",
+      "price": 1450,
+      "capacity": "Up to 10\" roll",
+      "material": "ABS",
+      "color": "White",
+      "structure": "Wall Mount",
+      "usage": "Offices, Malls, Factories",
+      "size": "11\" x 11\" x 4\"",
+      "finish": "Matte",
+      "description": "Lockable jumbo roll dispenser designed for high-traffic washrooms, reducing refill frequency and pilferage.",
+      "features": [
+        "Lockable cover",
+        "Transparent window for roll level",
+        "Easy-load spindle",
+        "Impact-resistant ABS"
+      ],
+      "minimumOrder": 15
+    },
+    {
+      "id": "hospital-disinfectant",
+      "name": "Hospital-grade Disinfectant 5L",
+      "categoryId": "chemicals",
+      "price": 980,
+      "capacity": "5 Liters",
+      "material": "BKC + QAC blend",
+      "color": "Clear",
+      "structure": "HDPE Can",
+      "usage": "Hospitals, Clinics, Pharma",
+      "size": "5L pack",
+      "grade": "ISO 9001",
+      "finish": "Matte",
+      "description": "Broad-spectrum disinfectant concentrate for critical healthcare and industrial environments with proven pathogen efficacy.",
+      "features": [
+        "Hospital-grade formulation",
+        "Non-corrosive on metals",
+        "Fresh fragrance",
+        "Dilution ready",
+        "HDPE industrial pack"
+      ],
+      "minimumOrder": 8
+    },
+    {
+      "id": "floor-cleaner",
+      "name": "Floor Cleaner Concentrate 5L",
+      "categoryId": "chemicals",
+      "price": 720,
+      "capacity": "5 Liters",
+      "material": "Low-foam surfactant",
+      "color": "Light Green",
+      "structure": "HDPE Can",
+      "usage": "Offices, Schools, Hotels",
+      "size": "5L pack",
+      "finish": "Gloss-safe",
+      "description": "Low-foam concentrated floor cleaner for auto-scrubbers and manual mopping, safe on marble and tiles.",
+      "features": [
+        "Low-foam for machines",
+        "Streak-free finish",
+        "Pleasant fragrance",
+        "Works in hard water"
+      ],
+      "minimumOrder": 10
+    },
+    {
+      "id": "glass-cleaner",
+      "name": "Glass & Surface Cleaner 5L",
+      "categoryId": "chemicals",
+      "price": 650,
+      "capacity": "5 Liters",
+      "material": "IPA + surfactant",
+      "color": "Blue",
+      "structure": "HDPE Can",
+      "usage": "Retail, Offices, Hospitality",
+      "size": "5L pack",
+      "finish": "Streak-free",
+      "description": "Fast-evaporating glass and surface cleaner delivering streak-free clarity for mirrors, displays, and glazing.",
+      "features": [
+        "Streak-free formula",
+        "Fast evaporation",
+        "Anti-smudge finish",
+        "Safe on glass and chrome"
+      ],
+      "minimumOrder": 12
+    },
+    {
+      "id": "monthly-refill-bundle",
+      "name": "Washroom Refill Bundle (Monthly)",
+      "categoryId": "washroom",
+      "price": 1850,
+      "capacity": "Per site plan",
+      "material": "Paper + Consumables",
+      "color": "White / Blue",
+      "structure": "Subscription",
+      "usage": "Corporate, Retail, Hospitality",
+      "size": "Monthly pack",
+      "finish": "Matte",
+      "description": "Pre-packed monthly refills for tissues, soap, sanitizer, and air fresheners to keep washrooms always stocked.",
+      "features": [
+        "Predictable monthly supply",
+        "Aligned to consumption patterns",
+        "Plug-and-play for existing dispensers",
+        "Delivery scheduling included"
+      ],
+      "minimumOrder": 3
+    },
+    {
+      "id": "quarterly-amc",
+      "name": "Quarterly Refill Supply Contract",
+      "categoryId": "washroom",
+      "price": 5400,
+      "capacity": "Per site",
+      "material": "Supply contract",
+      "color": "Navy",
+      "structure": "Quarterly replenishment",
+      "usage": "Enterprise Sites",
+      "size": "3-month cycle",
+      "finish": "Professional",
+      "description": "Quarterly supply contract covering planned refills and consumable replenishment for high-traffic sites.",
+      "features": [
+        "Quarterly scheduled replenishment",
+        "Bulk pack pricing",
+        "Consumption-based planning",
+        "Procurement-friendly documentation"
+      ],
+      "minimumOrder": 1
+    },
+    {
+      "id": "fragrance-refill",
+      "name": "Aerosol Fragrance Refill Pack",
+      "categoryId": "washroom",
+      "price": 420,
+      "capacity": "300 ml can",
+      "material": "Fragrance aerosol",
+      "color": "Assorted",
+      "structure": "Aerosol can",
+      "usage": "Washrooms, Lobbies",
+      "size": "Per can",
+      "finish": "Matte",
+      "description": "Long-lasting aerosol refills compatible with standard fragrance dispensers, with controlled spray intervals.",
+      "features": [
+        "Extended spray life",
+        "Multiple fragrance options",
+        "Fits standard dispensers",
+        "Leak-proof valve"
+      ],
+      "minimumOrder": 24
+    },
+    {
+      "id": "auto-soap-dispenser",
+      "name": "Auto Soap Dispenser",
+      "categoryId": "washroom",
+      "price": 1950,
+      "capacity": "500 ml",
+      "material": "ABS Plastic",
+      "color": "White",
+      "structure": "Wall Mount, Auto Sensor",
+      "usage": "Washrooms, Corporate, Hospitals",
+      "size": "8\" x 5\"",
+      "finish": "Matte",
+      "description": "Automatic soap dispenser with touchless sensor technology for hygienic hand washing in commercial spaces.",
+      "features": [
+        "Touchless auto-sensor",
+        "Easy refill cartridge system",
+        "Battery-powered with low indicator",
+        "Adjustable soap volume",
+        "Durable ABS construction"
+      ],
+      "minimumOrder": 5
+    },
+    {
+      "id": "ss-liquid-soap-dispenser",
+      "name": "SS Liquid Soap Dispenser",
+      "categoryId": "washroom",
+      "price": 2150,
+      "capacity": "1000 ml",
+      "material": "Stainless Steel 304",
+      "color": "Silver",
+      "structure": "Wall Mount, Pump",
+      "usage": "Hospitals, Clinics, Premium Offices",
+      "size": "9\" x 6\"",
+      "grade": "SS 304",
+      "finish": "Polished",
+      "description": "Premium stainless steel liquid soap dispenser with corrosion-resistant construction for healthcare facilities.",
+      "features": [
+        "Medical-grade stainless steel",
+        "Manual pump operation",
+        "High-capacity reservoir",
+        "Easy refill design",
+        "Hygienic stainless construction"
+      ],
+      "minimumOrder": 8
+    },
+    {
+      "id": "lotion-soap-dispenser",
+      "name": "Lotion With Soap Dispenser",
+      "categoryId": "washroom",
+      "price": 2280,
+      "capacity": "1000 ml",
+      "material": "ABS + SS Nozzle",
+      "color": "White / Chrome",
+      "structure": "Wall Mount, Auto Sensor",
+      "usage": "Premium Hotels, Spas, Offices",
+      "size": "9\" x 5\"",
+      "finish": "Chrome",
+      "description": "Dual-function automatic dispenser combining soap and lotion in one unit for luxury hygiene solutions.",
+      "features": [
+        "Dual soap and lotion function",
+        "Auto-sensor technology",
+        "Adjustable dispensing volume",
+        "Chrome-plated finish",
+        "Separate cartridge system"
+      ],
+      "minimumOrder": 6
+    },
+    {
+      "id": "automatic-hand-dryer",
+      "name": "Automatic Hand Dryer",
+      "categoryId": "washroom",
+      "price": 7850,
+      "capacity": "85 m/s air speed",
+      "material": "ABS",
+      "color": "White",
+      "structure": "Wall Mount",
+      "usage": "Airports, Hotels, Corporate",
+      "size": "12\" x 8\" x 8\"",
+      "finish": "Matte",
+      "description": "High-performance automatic hand dryer with quick dry time for high-traffic public facilities.",
+      "features": [
+        "Fast 12-second dry time",
+        "Energy-efficient motor",
+        "Automatic sensor activation",
+        "Noise reduction technology",
+        "Durable ABS housing"
+      ],
+      "minimumOrder": 4
+    },
+    {
+      "id": "automatic-shoe-cover-dispenser",
+      "name": "Automatic Shoe Cover Dispenser",
+      "categoryId": "washroom",
+      "price": 3250,
+      "capacity": "100 covers per roll",
+      "material": "ABS Plastic",
+      "color": "White",
+      "structure": "Wall Mount, Auto Dispense",
+      "usage": "Hospitals, Labs, Manufacturing",
+      "size": "10\" x 8\"",
+      "finish": "Matte",
+      "description": "Automatic shoe cover dispenser for contamination-free entry to sterile areas in medical and industrial facilities.",
+      "features": [
+        "Auto-dispense mechanism",
+        "High-capacity roll holder",
+        "One-touch operation",
+        "Heavy-duty plastic construction",
+        "Reduces cross-contamination"
+      ],
+      "minimumOrder": 3
+    },
+    {
+      "id": "stainless-steel-dustbin",
+      "name": "Stainless Steel Dustbin",
+      "categoryId": "waste",
+      "price": 2400,
+      "capacity": "50 Liters",
+      "material": "Stainless Steel 304",
+      "color": "Silver",
+      "structure": "Open Top",
+      "usage": "Offices, Malls, Factories",
+      "size": "13\" x 26\"",
+      "grade": "SS 304",
+      "finish": "Polished",
+      "description": "Heavy-duty stainless steel dustbin with polished finish for aesthetic and hygienic waste disposal.",
+      "features": [
+        "Premium SS 304 construction",
+        "Mirror-polished finish",
+        "Non-slip rubber base",
+        "Easy to clean",
+        "High-capacity design"
+      ],
+      "minimumOrder": 3
+    },
+    {
+      "id": "heavy-duty-wringer-trolley",
+      "name": "Heavy Duty Double Bucket Wringer Trolley",
+      "categoryId": "waste",
+      "price": 3850,
+      "capacity": "2 x 20 Liters",
+      "material": "Stainless Steel + Plastic",
+      "color": "Silver / Yellow",
+      "structure": "Dual bucket with wringer",
+      "usage": "Housekeeping, Cleaning, Hospitality",
+      "size": "24\" x 18\" x 36\"",
+      "grade": "Heavy Duty",
+      "finish": "Brushed",
+      "description": "Professional-grade housekeeping trolley with dual buckets and integrated wringer mechanism for efficient floor cleaning.",
+      "features": [
+        "Dual 20L stainless buckets",
+        "Heavy-duty wringer mechanism",
+        "Easy-glide wheels",
+        "Ergonomic handle design",
+        "Commercial-grade construction"
+      ],
+      "minimumOrder": 2
+    },
+    {
+      "id": "wringer-trolley-compact",
+      "name": "Wringer Trolley (Compact)",
+      "categoryId": "waste",
+      "price": 2650,
+      "capacity": "1 x 20 Liters",
+      "material": "Steel + Plastic",
+      "color": "Grey / Yellow",
+      "structure": "Single bucket with wringer",
+      "usage": "Small offices, Retail, Schools",
+      "size": "20\" x 16\" x 32\"",
+      "finish": "Matte",
+      "description": "Space-efficient single-bucket wringer trolley perfect for smaller facilities requiring daily cleaning operations.",
+      "features": [
+        "Single 20L bucket",
+        "Compact footprint",
+        "Smooth wringer action",
+        "Mobile wheels",
+        "Budget-friendly option"
+      ],
+      "minimumOrder": 2
+    },
+    {
+      "id": "ss-swing-dustbin",
+      "name": "Stainless Steel Swing Dustbin",
+      "categoryId": "waste",
+      "price": 1850,
+      "capacity": "40 Liters",
+      "material": "Stainless Steel 202",
+      "color": "Silver",
+      "structure": "Swing Top Lid",
+      "usage": "Offices, Canteens, Cafeterias",
+      "size": "12\" x 12\" x 24\"",
+      "grade": "SS 202",
+      "finish": "Matte",
+      "description": "Space-saving swing-top stainless steel bin designed for compact spaces while maintaining easy waste access.",
+      "features": [
+        "Swing-top lid design",
+        "Space-efficient structure",
+        "SS 202 construction",
+        "Self-closing mechanism",
+        "Easy to empty and clean"
+      ],
+      "minimumOrder": 5
+    },
+    {
+      "id": "ss-trio-bin",
+      "name": "Stainless Steel Trio Bin",
+      "categoryId": "waste",
+      "price": 4200,
+      "capacity": "3 x 20 Liters",
+      "material": "Stainless Steel 304",
+      "color": "Silver",
+      "structure": "3-compartment segregation",
+      "usage": "Corporate, Hospitals, Malls",
+      "size": "18\" x 14\" x 32\"",
+      "grade": "SS 304",
+      "finish": "Polished",
+      "description": "Premium stainless steel waste segregation unit with three compartments for proper waste management and recycling.",
+      "features": [
+        "Three-compartment design",
+        "Premium SS 304 grade",
+        "Color-coded lids included",
+        "Polished finish",
+        "Integrated collection tray"
+      ],
+      "minimumOrder": 2
+    },
+    {
+      "id": "queue-manager-velvet-rope",
+      "name": "Queue Manager With Red Velvet Rope",
+      "categoryId": "waste",
+      "price": 2850,
+      "capacity": "Up to 10 stands",
+      "material": "Steel + Velvet",
+      "color": "Silver / Red",
+      "structure": "Modular queue pole",
+      "usage": "Banks, Retail, Hospitals, Service Centers",
+      "size": "Extendable 36-40\"",
+      "finish": "Polished",
+      "description": "Professional queue management system with elegant red velvet rope for organizing customer flow in commercial spaces.",
+      "features": [
+        "Modular design",
+        "Premium red velvet rope",
+        "Extendable pole height",
+        "Easy to assemble",
+        "Premium polished finish"
+      ],
+      "minimumOrder": 5
+    },
+    {
+      "id": "shoe-shine-machine",
+      "name": "Shoe Shine Machine",
+      "categoryId": "waste",
+      "price": 5500,
+      "capacity": "Variable",
+      "material": "Metal + Plastic",
+      "color": "Black / Chrome",
+      "structure": "Pedal-operated",
+      "usage": "Hotels, Resorts, Premium Offices",
+      "size": "18\" x 16\" x 12\"",
+      "finish": "Chrome",
+      "description": "Automatic shoe shine machine with pedal operation for quick and efficient shoe polishing in hospitality settings.",
+      "features": [
+        "Pedal-operated system",
+        "Dual brush mechanism",
+        "Adjustable polish dispenser",
+        "Durable metal frame",
+        "Professional finish"
+      ],
+      "minimumOrder": 1
+    },
+    {
+      "id": "bathroom-mirror-cabinet",
+      "name": "Bathroom Mirror Cabinet",
+      "categoryId": "washroom",
+      "price": 1650,
+      "capacity": "5 Liters storage",
+      "material": "Stainless Steel + Glass",
+      "color": "Silver",
+      "structure": "Wall Mount",
+      "usage": "Corporate washrooms, Hotels, Offices",
+      "size": "24\" x 18\" x 4\"",
+      "grade": "SS 304",
+      "finish": "Polished",
+      "description": "Wall-mounted mirror cabinet combining reflective surface with internal storage for washroom supplies.",
+      "features": [
+        "Integrated mirror",
+        "Internal storage shelves",
+        "Stainless steel frame",
+        "Anti-fog mirror option",
+        "Easy to mount"
+      ],
+      "minimumOrder": 3
+    },
+    {
+      "id": "paper-towel-dispenser",
+      "name": "Paper Towel Dispenser (Z-Fold)",
+      "categoryId": "washroom",
+      "price": 1280,
+      "capacity": "400 sheets",
+      "material": "ABS Plastic",
+      "color": "White",
+      "structure": "Wall Mount",
+      "usage": "Offices, Retail, Restaurants",
+      "size": "11\" x 9\" x 4\"",
+      "finish": "Matte",
+      "description": "Wall-mounted dispenser for Z-fold paper towels with large capacity for high-traffic restrooms.",
+      "features": [
+        "High-capacity design",
+        "Easy refill mechanism",
+        "Consistent dispensing",
+        "Impact-resistant plastic",
+        "Compact footprint"
+      ],
+      "minimumOrder": 8
+    },
+    {
+      "id": "hand-sanitizer-dispenser",
+      "name": "Hand Sanitizer Automatic Dispenser",
+      "categoryId": "washroom",
+      "price": 1720,
+      "capacity": "1000 ml",
+      "material": "ABS + SS Nozzle",
+      "color": "White",
+      "structure": "Wall Mount, Auto Sensor",
+      "usage": "Corporate, Malls, Hospitals",
+      "size": "8\" x 5\"",
+      "finish": "Chrome nozzle",
+      "description": "Touchless automatic sanitizer dispenser with IR sensor for contamination-free hand hygiene.",
+      "features": [
+        "Auto-sensor technology",
+        "Adjustable dispense volume",
+        "LED low-level indicator",
+        "Waterproof design",
+        "Stainless nozzle"
+      ],
+      "minimumOrder": 10
+    },
+    {
+      "id": "air-freshener-dispenser",
+      "name": "Air Freshener Automatic Dispenser",
+      "categoryId": "washroom",
+      "price": 1450,
+      "capacity": "300 ml cartridge",
+      "material": "ABS Plastic",
+      "color": "White",
+      "structure": "Wall Mount, Auto Timer",
+      "usage": "Washrooms, Lobbies, Conference Rooms",
+      "size": "7\" x 5\"",
+      "finish": "Matte",
+      "description": "Automatic air freshener dispenser with timed spray intervals for continuous washroom fragrance.",
+      "features": [
+        "Programmable intervals",
+        "Optional manual spray",
+        "Low-battery indicator",
+        "Durable ABS housing",
+        "Multiple fragrance options"
+      ],
+      "minimumOrder": 12
+    },
+    {
+      "id": "soap-refill-cartridge",
+      "name": "Universal Soap Refill Cartridge",
+      "categoryId": "washroom",
+      "price": 280,
+      "capacity": "1000 ml",
+      "material": "Refillable cartridge",
+      "color": "Clear",
+      "structure": "Sealed cartridge",
+      "usage": "All auto dispensers",
+      "size": "1L cartridge",
+      "finish": "Clear",
+      "description": "Universal refillable soap cartridge compatible with most auto-dispensers for easy restocking.",
+      "features": [
+        "Sealed sterile packaging",
+        "Easy installation",
+        "Economical refill option",
+        "Multiple formulations available",
+        "No waste design"
+      ],
+      "minimumOrder": 20
+    },
+    {
+      "id": "tissue-refill-bundle",
+      "name": "Tissue Refill Bundle (100 rolls)",
+      "categoryId": "washroom",
+      "price": 2400,
+      "capacity": "100 rolls",
+      "material": "2-ply tissue paper",
+      "color": "White",
+      "structure": "Box pack",
+      "usage": "All tissue dispensers",
+      "size": "Bulk pack",
+      "finish": "Matte",
+      "description": "Bulk tissue roll bundle for restocking washroom dispensers with premium 2-ply soft paper.",
+      "features": [
+        "Premium 2-ply tissue",
+        "Bulk ordering savings",
+        "Individual roll wrapping",
+        "Hygienic packaging",
+        "Soft and durable"
+      ],
+      "minimumOrder": 1
+    }
+  ]
+}

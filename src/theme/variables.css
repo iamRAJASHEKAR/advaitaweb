@@ -1,0 +1,46 @@
+/**
+ * CSS Variables for theme colors
+ * Import this at the top of index.css to make colors available globally
+ */
+
+:root {
+  /* Primary Brand */
+  --color-primary: #0a2540;
+  --color-primary-light: #1a3a52;
+  --color-primary-dark: #051427;
+  --color-primary-lighter: #f0f4f9;
+
+  /* Secondary */
+  --color-secondary: #cbd5e1;
+  --color-secondary-light: #e2e8f0;
+  --color-secondary-dark: #94a3b8;
+
+  /* Background */
+  --color-bg-main: #ffffff;
+  --color-bg-light: #f8fafc;
+  --color-bg-dark: #0f172a;
+
+  /* Text */
+  --color-text-primary: #020617;
+  --color-text-secondary: #475569;
+  --color-text-muted: #6b7280;
+  --color-text-light: #cbd5e1;
+  --color-text-inverse: #ffffff;
+
+  /* CTA */
+  --color-cta: #2563eb;
+  --color-cta-hover: #1d4ed8;
+  --color-cta-active: #1e40af;
+  --color-cta-light: #dbeafe;
+
+  /* Semantic */
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-error: #ef4444;
+  --color-info: #3b82f6;
+
+  /* Borders */
+  --color-border-light: #e2e8f0;
+  --color-border-dark: #cbd5e1;
+  --color-border-primary: #2563eb;
+}
