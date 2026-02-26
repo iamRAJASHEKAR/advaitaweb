@@ -22,7 +22,6 @@ export function HeroSlider({ slides, onPrimaryCta }: HeroSliderProps) {
     return () => window.clearInterval(interval);
   }, [slides.length, isPaused]);
 
-  const goToSlide = (index: number) => setCurrentSlide(index);
   const nextSlide = () =>
     setCurrentSlide((prev) => (prev + 1) % slides.length);
   const prevSlide = () =>
@@ -76,32 +75,28 @@ export function HeroSlider({ slides, onPrimaryCta }: HeroSliderProps) {
             </div>
           </div>
         ))}
-      </div>
-      <div className="hero-controls">
-        <button
-          className="hero-arrow hero-arrow--prev"
-          onClick={prevSlide}
-          aria-label={strings.hero.ariaPrev}
-        >
-          ‹
-        </button>
-        <div className="hero-dots">
-          {slides.map((_, index) => (
-            <button
-              key={index}
-              className={`hero-dot ${index === currentSlide ? "hero-dot--active" : ""}`}
-              onClick={() => goToSlide(index)}
-              aria-label={strings.hero.ariaGoTo(index + 1)}
-            />
-          ))}
+        <div className="hero-controls">
+          <button
+            className="hero-arrow hero-arrow--prev"
+            onClick={(e) => {
+              e.stopPropagation();
+              prevSlide();
+            }}
+            aria-label={strings.hero.ariaPrev}
+          >
+            ‹
+          </button>
+          <button
+            className="hero-arrow hero-arrow--next"
+            onClick={(e) => {
+              e.stopPropagation();
+              nextSlide();
+            }}
+            aria-label={strings.hero.ariaNext}
+          >
+            ›
+          </button>
         </div>
-        <button
-          className="hero-arrow hero-arrow--next"
-          onClick={nextSlide}
-          aria-label={strings.hero.ariaNext}
-        >
-          ›
-        </button>
       </div>
     </section>
   );

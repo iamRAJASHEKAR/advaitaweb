@@ -8,7 +8,7 @@ type IndustriesSectionProps = {
 
 export function IndustriesSection({ industries }: IndustriesSectionProps) {
   return (
-    <section className="shell section section--alt">
+    <section className="shell section section--alt industries-section">
       <div className="section__header">
         <div>
           <p className="eyebrow">{strings.industries.eyebrow}</p>

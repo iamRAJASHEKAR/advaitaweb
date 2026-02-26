@@ -40,7 +40,7 @@ main {
 .shell {
   width: 100%;
   max-width: 100%;
-  padding: 40px max(24px, calc((100vw - 1400px) / 2));
+  padding: 24px max(24px, calc((100vw - 1400px) / 2));
 }
 
 .section {
@@ -231,7 +231,7 @@ main {
 
 @media (max-width: 900px) {
   .shell {
-    padding: 32px 16px;
+    padding: 20px 16px;
   }
 
   .btn--lg {
@@ -242,7 +242,7 @@ main {
 
 @media (max-width: 600px) {
   .shell {
-    padding: 24px 12px;
+    padding: 16px 12px;
   }
 
   .btn {
@@ -258,4 +258,34 @@ main {
   .grid--4 {
     grid-template-columns: 1fr;
   }
+}
+
+/* Floating WhatsApp button - right bottom, 20px margin */
+.whatsapp-fab {
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #25d366;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+  z-index: 9999;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-decoration: none;
+}
+
+.whatsapp-fab:hover {
+  color: #fff;
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(37, 211, 102, 0.5);
+}
+
+.whatsapp-fab svg {
+  width: 32px;
+  height: 32px;
 }

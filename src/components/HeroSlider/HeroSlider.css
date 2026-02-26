@@ -1,5 +1,5 @@
 .hero {
-  padding: 0 0 80px;
+  padding: 0 0 24px;
   position: relative;
 }
 
@@ -112,60 +112,51 @@
 }
 
 .hero-controls {
-  display: flex;
-  gap: 16px;
-  align-items: center;
-  justify-content: center;
-  margin-top: 20px;
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.hero-controls > * {
+  pointer-events: auto;
+}
+
+.hero-arrow--prev {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.hero-arrow--next {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .hero-arrow {
   width: 40px;
   height: 40px;
-  border: 1px solid var(--color-border-dark);
-  background: var(--color-bg-main);
+  border: 1px solid var(--color-cta);
+  background: var(--color-cta-light);
   border-radius: 50%;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 24px;
-  color: var(--color-primary);
+  color: var(--color-cta);
   transition:
     background-color 0.2s ease,
-    border-color 0.2s ease;
+    border-color 0.2s ease,
+    color 0.2s ease;
 }
 
 .hero-arrow:hover {
-  background: var(--color-cta-light);
-  border-color: var(--color-cta);
-  color: var(--color-cta);
-}
-
-.hero-dots {
-  display: flex;
-  gap: 8px;
-}
-
-.hero-dot {
-  width: 10px;
-  height: 10px;
-  border: 1px solid var(--color-border-dark);
-  background: transparent;
-  border-radius: 50%;
-  cursor: pointer;
-  transition:
-    background-color 0.2s ease,
-    border-color 0.2s ease;
-}
-
-.hero-dot:hover {
-  border-color: var(--color-cta);
-}
-
-.hero-dot--active {
-  background: var(--color-cta);
-  border-color: var(--color-cta);
+  background: var(--color-bg-main);
+  border-color: var(--color-border-dark);
+  color: var(--color-primary);
 }
 
 @media (max-width: 900px) {
@@ -175,7 +166,7 @@
   }
 
   .hero {
-    padding: 0 0 88px;
+    padding: 0 0 52px;
   }
 
   .hero-image {
@@ -195,7 +186,7 @@
 
 @media (max-width: 768px) {
   .hero {
-    padding: 0 0 48px;
+    padding: 0 0 28px;
   }
 
   .hero__title {
@@ -220,7 +211,7 @@
 
 @media (max-width: 600px) {
   .hero {
-    padding: 0 0 40px;
+    padding: 0 0 24px;
   }
 
   .hero__title {
@@ -232,19 +223,17 @@
     max-height: 200px;
   }
 
-  .hero-controls {
-    margin-top: 16px;
-    gap: 12px;
+  .hero-arrow--prev {
+    left: 10px;
+  }
+
+  .hero-arrow--next {
+    right: 10px;
   }
 
   .hero-arrow {
     width: 32px;
     height: 32px;
     font-size: 19.2px;
-  }
-
-  .hero-dot {
-    width: 8px;
-    height: 8px;
   }
 }

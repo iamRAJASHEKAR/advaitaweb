@@ -1,31 +1,43 @@
+/* 50% of shell's default bottom padding */
+.process-section.shell {
+  padding-bottom: 12px;
+}
+.shell-process{
+  padding: 16px 12px;
+
+}
 .process-flow {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 32px;
-  margin-top: 40px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 48px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
-
 .process-step {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
   position: relative;
-  padding: 16px;
+  padding: 14px 12px;
   background: var(--color-bg-light);
   border: 1px solid var(--color-border-light);
   border-radius: 12px;
   text-align: center;
+  min-width: 0;
 }
 
+/* Arrow sits in the gap between steps, not overlapping the next item */
 .process-step:not(:last-child)::after {
   content: "→";
   position: absolute;
-  right: -44px;
+  right: -24px;
   top: 50%;
-  transform: translateY(-50%);
-  font-size: 24px;
+  transform: translate(50%, -50%);
+  font-size: 22px;
   color: var(--color-cta);
   font-weight: 700;
+  line-height: 1;
+  z-index: 1;
 }
 
 .step-number {
@@ -43,35 +55,49 @@
 
 .step-title {
   margin: 0;
-  font-size: 17.6px;
+  font-size: 16px;
   color: var(--color-primary);
   font-weight: 700;
 }
 
 .step-description {
   margin: 0;
-  font-size: 14.4px;
+  font-size: 13.6px;
   color: var(--color-text-secondary);
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 @media (max-width: 900px) {
   .process-flow {
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 32px;
   }
 
   .process-step:not(:last-child)::after {
     content: "↓";
     left: 50%;
     right: auto;
-    top: 100%;
-    transform: translateX(-50%);
+    top: auto;
+    bottom: -24px;
+    transform: translate(-50%, 50%);
+    font-size: 22px;
+    color: var(--color-cta);
+    font-weight: 700;
+    line-height: 1;
+    z-index: 1;
   }
 }
 
 @media (max-width: 600px) {
+  .process-step {
+    padding: 12px 10px;
+  }
+
   .step-title {
-    font-size: 15.2px;
+    font-size: 14.4px;
+  }
+
+  .step-description {
+    font-size: 13px;
   }
 }

@@ -35,9 +35,9 @@ export const strings = {
   },
   solutions: {
     eyebrow: "Our Products",
-    title: "Core Product Categories We Supply",
+    title: "Explore Our Range of Products",
     body:
-      "Wholesale distributors of Washroom, Cleaning, and Waste Management solutions. Serving Retailers, Distributors, Corporate Offices, and Institutions.",
+      "We serve Retailers, Distributors, Corporate Offices, and Institutions.",
   },
   why: {
     eyebrow: "Why Choose AHS",

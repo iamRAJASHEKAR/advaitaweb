@@ -78,7 +78,7 @@
     },
     {
       "step": 4,
-      "title": "Replenishment Planning",
+      "title": "Stock Refill Planning",
       "description": "Repeat orders with predictable supply and reorder reminders."
     }
   ],
@@ -86,7 +86,7 @@
     {
       "id": "washroom",
       "name": "Washroom Supply Systems",
-      "tagline": "Wholesale distributors of washroom solutions. Serving Retailers, Distributors, Corporate Offices, and Institutions.",
+      "tagline": "Supply of washroom hygiene products—tissues, dispensers, soap & sanitizer liquids, hand dryers, and more.",
       "items": [
         "Tissue dispensers (C-fold, M-fold, JRT)",
         "Soap & sanitizer dispensers (auto & manual)",
@@ -99,7 +99,7 @@
     {
       "id": "waste",
       "name": "Waste Management",
-      "tagline": "Wholesale distributors of waste management solutions. Serving Retailers, Distributors, Corporate Offices, and Institutions.",
+      "tagline": "Supply of waste management solutions—dustbins, pedal bins, touchless bins, housekeeping trolleys, and more.",
       "items": [
         "Stainless steel dustbins & pedal bins",
         "Touchless sensor bins",
@@ -112,7 +112,7 @@
     {
       "id": "chemicals",
       "name": "Cleaning & Chemicals",
-      "tagline": "Wholesale distributors of cleaning and chemical solutions. Serving Retailers, Distributors, Corporate Offices, and Institutions.",
+      "tagline": "Supply of cleaning & chemical solutions—disinfectants, floor care, surface sanitizers, and more.",
       "items": [
         "Disinfectants (ISO & FSSAI approved)",
         "Eco-friendly cleaning solutions",
@@ -121,6 +121,19 @@
       ],
       "lead": "Lead time: 2-3 days stock availability",
       "availability": "Bulk orders: custom packaging available"
+    },
+    {
+      "id": "outdoor",
+      "name": "Outdoor Dustbins & Trolleys",
+      "tagline": "Supply of outdoor dustbins, steel trolleys, custom trolleys, and heavy-duty waste solutions.",
+      "items": [
+        "Outdoor dustbins (stainless steel, HDPE)",
+        "Steel trolleys & housekeeping carts",
+        "Custom trolleys to specification",
+        "Heavy-duty waste containers"
+      ],
+      "lead": "Lead time: 5-7 days; custom trolleys on quote",
+      "availability": "Bulk and custom orders welcome"
     }
   ],
   "products": [

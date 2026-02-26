@@ -1,3 +1,8 @@
+/* Half the usual gap between slider and this section */
+.industries-section.shell {
+  padding-top: 12px;
+}
+
 .grid--industry {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));

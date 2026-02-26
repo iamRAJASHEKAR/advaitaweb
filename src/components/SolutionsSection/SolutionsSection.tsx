@@ -15,6 +15,7 @@ const categoryIcons: Record<string, string> = {
   washroom: "🚰",
   waste: "♻️",
   chemicals: "🧪",
+  outdoor: "🛒",
 };
 
 export function SolutionsSection({
