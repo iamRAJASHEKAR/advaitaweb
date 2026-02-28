@@ -264,6 +264,23 @@
   color: var(--color-cta);
 }
 
+.nav__link-btn {
+  color: var(--color-text-primary);
+  padding: 6.4px 9.6px;
+  border-radius: 8px;
+  border: none;
+  background: transparent;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.nav__link-btn:hover {
+  background: var(--color-cta-light);
+  color: var(--color-cta);
+}
+
 
 /* Desktop search (beside Catalog) */
 .header__search {

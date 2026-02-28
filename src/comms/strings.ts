@@ -12,6 +12,7 @@ export const strings = {
     process: "Process",
     catalog: "Catalog",
     catalogue: "Catalogue",
+    privacyPolicy: "Privacy Policy",
     quote: "Get Wholesale Quote",
   },
   header: {

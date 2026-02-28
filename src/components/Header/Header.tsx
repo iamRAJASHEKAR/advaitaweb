@@ -14,6 +14,7 @@ export type ProductDetailMenuConfig = {
 type HeaderProps = {
   onHome: () => void;
   onCatalog: () => void;
+  onPrivacyPolicy: () => void;
   onNavToSection: (sectionId: string) => void;
   products: Product[];
   onSelectProduct: (id: string) => void;
@@ -24,6 +25,7 @@ type HeaderProps = {
 export function Header({
   onHome,
   onCatalog,
+  onPrivacyPolicy,
   onNavToSection,
   products,
   onSelectProduct,
@@ -112,6 +114,11 @@ export function Header({
     onCatalog();
   };
 
+  const handleNavPrivacyPolicy = () => {
+    closeMenu();
+    onPrivacyPolicy();
+  };
+
   const handleSelectProduct = (id: string) => {
     onSelectProduct(id);
     closeSearch();
@@ -183,6 +190,9 @@ export function Header({
           <a href="#solutions">{strings.nav.products}</a>
           <a href="#why-ahs">{strings.nav.why}</a>
           <a href="#process">{strings.nav.process}</a>
+          <button type="button" className="nav__link-btn" onClick={onPrivacyPolicy}>
+            {strings.nav.privacyPolicy}
+          </button>
         </nav>
         <div className="header__nav-actions">
           <button type="button" className="btn btn--outline btn--sm" onClick={onCatalog}>
@@ -328,6 +338,9 @@ export function Header({
               </button>
               <button type="button" className="header__drawer-item" onClick={handleNavCatalog}>
                 {strings.nav.catalogue}
+              </button>
+              <button type="button" className="header__drawer-item" onClick={handleNavPrivacyPolicy}>
+                {strings.nav.privacyPolicy}
               </button>
             </nav>
           )}

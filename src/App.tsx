@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Routes, Route, useNavigate, useParams, useLocation, useMatch } from "react-router-dom";
+import { Routes, Route, Navigate, useNavigate, useParams, useLocation, useMatch } from "react-router-dom";
 import "./App.css";
 import { catalogData, catalogUrl } from "./comms/comms";
 import { strings } from "./comms/strings";
@@ -15,6 +15,7 @@ import { ClosingCtaSection } from "./components/ClosingCtaSection/ClosingCtaSect
 import { TrustSection } from "./components/TrustSection/TrustSection";
 import { ProductDetailPage } from "./components/ProductDetailPage/ProductDetailPage";
 import { ComingSoonPage } from "./components/ComingSoonPage/ComingSoonPage";
+import { PrivacyPolicyPage } from "./components/PrivacyPolicyPage/PrivacyPolicyPage";
 import { Modal } from "./components/Modal/Modal";
 import { QuoteForm } from "./components/Forms/QuoteForm";
 import { CallbackForm } from "./components/Forms/CallbackForm";
@@ -74,6 +75,7 @@ function App() {
   const productId = productMatch?.params?.id ?? null;
   const isProductPage = location.pathname.startsWith("/product/");
   const isComingSoonPage = location.pathname === "/coming-soon";
+  const isPrivacyPolicyPage = location.pathname === "/privacypolicy" || location.pathname === "/privacy-policy";
 
   const handleProductClick = (productId: string) => {
     navigate(`/product/${productId}`);
@@ -97,6 +99,10 @@ function App() {
         <Header
           onHome={() => navigate("/")}
           onCatalog={handleSeeAllProducts}
+          onPrivacyPolicy={() => {
+            navigate("/privacypolicy");
+            window.scrollTo(0, 0);
+          }}
           onNavToSection={handleNavToSection}
           products={catalogData.products}
           onSelectProduct={handleProductClick}
@@ -159,6 +165,8 @@ function App() {
               />
             }
           />
+          <Route path="/privacypolicy" element={<PrivacyPolicyPage />} />
+          <Route path="/privacy-policy" element={<Navigate to="/privacypolicy" replace />} />
           <Route path="/coming-soon" element={<ComingSoonPage />} />
         </Routes>
       </main>
@@ -182,7 +190,7 @@ function App() {
         </Modal>
       )}
 
-      {!isComingSoonPage && (
+      {!isComingSoonPage && !isPrivacyPolicyPage && (
         <a
           href={`https://wa.me/91${strings.header.phone.replace(/\D/g, "")}`}
           target="_blank"
