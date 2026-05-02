@@ -119,6 +119,11 @@ export function Header({
     onPrivacyPolicy();
   };
 
+  const handleNavContactUs = () => {
+    closeMenu();
+    onNavToSection("contact-us");
+  };
+
   const handleSelectProduct = (id: string) => {
     onSelectProduct(id);
     closeSearch();
@@ -157,32 +162,6 @@ export function Header({
           </div>
         </div>
 
-        <div className="header__meta">
-          <div className="header__location" aria-label="Location">
-            <svg className="header__location-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
-              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-              <circle cx="12" cy="10" r="3" />
-            </svg>
-            <span>{strings.header.location}</span>
-          </div>
-          <div className="header__trust" aria-hidden>
-            <svg className="header__trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-            </svg>
-            <span>Trusted</span>
-          </div>
-          <div className="header__contact-card">
-            <a href={`tel:${strings.header.phone}`} className="header__phone">
-              <svg className="header__phone-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-              </svg>
-              <span>{strings.header.phone}</span>
-            </a>
-            <div className="header__response-row">
-              <span className="header__response-value">{strings.header.responseTime} {strings.header.responseTimeLabel}</span>
-            </div>
-          </div>
-        </div>
       </div>
 
       <div className="header__nav-row">
@@ -192,6 +171,9 @@ export function Header({
           <a href="#process">{strings.nav.process}</a>
           <button type="button" className="nav__link-btn" onClick={onPrivacyPolicy}>
             {strings.nav.privacyPolicy}
+          </button>
+          <button type="button" className="nav__link-btn" onClick={handleNavContactUs}>
+            {strings.nav.contactUs}
           </button>
         </nav>
         <div className="header__nav-actions">
@@ -336,11 +318,14 @@ export function Header({
               <button type="button" className="header__drawer-item" onClick={handleNavAboutUs}>
                 {strings.nav.aboutUs}
               </button>
-              <button type="button" className="header__drawer-item" onClick={handleNavCatalog}>
-                {strings.nav.catalogue}
-              </button>
               <button type="button" className="header__drawer-item" onClick={handleNavPrivacyPolicy}>
                 {strings.nav.privacyPolicy}
+              </button>
+              <button type="button" className="header__drawer-item" onClick={handleNavContactUs}>
+                {strings.nav.contactUs}
+              </button>
+              <button type="button" className="header__drawer-item" onClick={handleNavCatalog}>
+                {strings.nav.catalogue}
               </button>
             </nav>
           )}
