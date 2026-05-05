@@ -250,7 +250,7 @@ function App() {
         >
           <div className="brand__mark">AH</div>
           <div>
-            <p className="eyebrow">Advaita Hyginie</p>
+            <p className="eyebrow">Advaita Hygiene Solutions</p>
             <h1 className="brand__title">B2B Hygiene Solutions</h1>
             <p className="brand__subtitle">
               Trusted partner for enterprise hygiene, supplies, and on-site

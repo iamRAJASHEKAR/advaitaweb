@@ -6,7 +6,7 @@ type ClosingCtaSectionProps = {
 };
 
 export function ClosingCtaSection({ onPrimaryCta }: ClosingCtaSectionProps) {
-  const whatsappUrl = `https://wa.me/91${strings.header.phone.replace(/\D/g, "")}`;
+  const whatsappUrl = `https://wa.me/${strings.header.phone.replace(/\D/g, "")}`;
 
   return (
     <section id="contact-us" className="shell section section--closing">
@@ -42,14 +42,14 @@ export function ClosingCtaSection({ onPrimaryCta }: ClosingCtaSectionProps) {
               <span className="closing-contact__value">{strings.header.location}</span>
             </div>
           </div>
-          <div className="closing-contact__item">
+          <div className="closing-contact__item closing-contact__item--phone">
             <svg className="closing-contact__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
               <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
             </svg>
             <div>
-              <span className="closing-contact__label">Phone number</span>
-              <a className="closing-contact__value" href={`tel:${strings.header.phone}`}>
-                {strings.header.phone}
+              <span className="closing-contact__label">Primary business phone</span>
+              <a className="closing-contact__value closing-contact__value--phone" href={`tel:${strings.header.phone}`}>
+                {strings.header.phoneDisplay}
               </a>
             </div>
           </div>

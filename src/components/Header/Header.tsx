@@ -166,9 +166,15 @@ export function Header({
 
       <div className="header__nav-row">
         <nav className="nav">
-          <a href="#solutions">{strings.nav.products}</a>
-          <a href="#why-ahs">{strings.nav.why}</a>
-          <a href="#process">{strings.nav.process}</a>
+          <button type="button" className="nav__link-btn" onClick={handleNavProducts}>
+            {strings.nav.products}
+          </button>
+          <button type="button" className="nav__link-btn" onClick={handleNavAboutUs}>
+            {strings.nav.why}
+          </button>
+          <button type="button" className="nav__link-btn" onClick={() => onNavToSection("process")}>
+            {strings.nav.process}
+          </button>
           <button type="button" className="nav__link-btn" onClick={onPrivacyPolicy}>
             {strings.nav.privacyPolicy}
           </button>

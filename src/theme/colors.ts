@@ -1,5 +1,5 @@
 /**
- * Advaita Hyginie Design System - Color Palette
+ * Advaita Hygiene Solutions Design System - Color Palette
  * Centralized color configuration for consistent theming across the application
  */
 

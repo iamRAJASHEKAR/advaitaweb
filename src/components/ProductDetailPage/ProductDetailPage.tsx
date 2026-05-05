@@ -1,12 +1,10 @@
-import { useEffect, useState, useRef, useMemo } from "react";
+import { useEffect, useState } from "react";
 import "./ProductDetailPage.css";
-import type { Product, ProductCategory } from "../../comms/types";
+import type { Product } from "../../comms/types";
 import { strings } from "../../comms/strings";
 
 type ProductDetailPageProps = {
   product: Product;
-  categories: ProductCategory[];
-  allProducts: Product[];
   onBack: () => void;
   onGetQuote: () => void;
   onRequestCallback: () => void;
@@ -16,8 +14,6 @@ type ProductDetailPageProps = {
 
 export function ProductDetailPage({
   product,
-  categories,
-  allProducts,
   onBack,
   onGetQuote,
   onRequestCallback,
@@ -25,104 +21,14 @@ export function ProductDetailPage({
   relatedProducts,
 }: ProductDetailPageProps) {
   const [mainImage, setMainImage] = useState(product.images[0]);
-  const mainScrollRef = useRef<HTMLDivElement>(null);
-  const [expandedCategories, setExpandedCategories] = useState<Set<string>>(
-    () => new Set([product.categoryId]),
-  );
-
-  const productsByCategory = useMemo(() => {
-    const map = new Map<string, Product[]>();
-    for (const cat of categories) {
-      map.set(
-        cat.id,
-        allProducts.filter((p) => p.categoryId === cat.id),
-      );
-    }
-    return map;
-  }, [categories, allProducts]);
 
   useEffect(() => {
     setMainImage(product.images[0]);
   }, [product]);
 
   useEffect(() => {
-    mainScrollRef.current?.scrollTo({ top: 0, behavior: "smooth" });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }, [product.id]);
-
-  useEffect(() => {
-    setExpandedCategories((prev) => new Set(prev).add(product.categoryId));
-  }, [product.categoryId]);
-
-  const toggleCategory = (categoryId: string) => {
-    setExpandedCategories((prev) => {
-      const next = new Set(prev);
-      if (next.has(categoryId)) next.delete(categoryId);
-      else next.add(categoryId);
-      return next;
-    });
-  };
-
-  const renderProductNav = (onSelect: (id: string) => void) => (
-    <>
-      <h2 className="product-sidebar__title">
-        {strings.productDetail.allProductsTitle}
-      </h2>
-      <nav className="product-sidebar__nav" aria-label="Products by category">
-        {categories.map((category) => {
-          const products = productsByCategory.get(category.id) ?? [];
-          const isExpanded = expandedCategories.has(category.id);
-          return (
-            <div key={category.id} className="product-sidebar__category">
-              <button
-                type="button"
-                className="product-sidebar__category-btn"
-                onClick={() => toggleCategory(category.id)}
-                aria-expanded={isExpanded}
-                aria-label={
-                  isExpanded
-                    ? strings.productDetail.menuCollapse
-                    : strings.productDetail.menuExpand
-                }
-              >
-                <span className="product-sidebar__category-name">
-                  {category.name}
-                </span>
-                <span
-                  className={`product-sidebar__arrow ${isExpanded ? "product-sidebar__arrow--up" : "product-sidebar__arrow--down"}`}
-                  aria-hidden
-                >
-                  {isExpanded ? (
-                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M2 9l4-4 4 4" />
-                    </svg>
-                  ) : (
-                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M2 3l4 4 4-4" />
-                    </svg>
-                  )}
-                </span>
-              </button>
-              {isExpanded && (
-                <ul className="product-sidebar__list">
-                  {products.map((p) => (
-                    <li key={p.id}>
-                      <button
-                        type="button"
-                        className={`product-sidebar__item ${p.id === product.id ? "product-sidebar__item--active" : ""}`}
-                        onClick={() => onSelect(p.id)}
-                      >
-                        {p.name}
-                      </button>
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </div>
-          );
-        })}
-      </nav>
-    </>
-  );
 
   return (
     <section className="shell product-detail">
@@ -130,17 +36,7 @@ export function ProductDetailPage({
         {strings.productDetail.back}
       </button>
 
-      <div className="product-detail-split">
-        <aside className="product-sidebar">
-          {renderProductNav(onSelectProduct)}
-        </aside>
-
-        <div
-          ref={mainScrollRef}
-          className="product-detail-main"
-          role="region"
-          aria-label="Product details"
-        >
+      <div className="product-detail-main" role="region" aria-label="Product details">
       <div className="product-layout" key={product.id}>
         <div className="product-gallery">
           <div className="main-image">
@@ -283,7 +179,6 @@ export function ProductDetailPage({
           ))}
         </div>
       </div>
-        </div>
       </div>
     </section>
   );
