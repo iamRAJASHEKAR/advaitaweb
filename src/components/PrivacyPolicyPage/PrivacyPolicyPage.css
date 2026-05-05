@@ -69,6 +69,29 @@
   color: var(--color-text-primary);
 }
 
+.privacy-policy__phone {
+  display: inline-flex;
+  margin: 4px 0;
+  padding: 6px 10px;
+  background: var(--color-primary-lighter);
+  border: 1px solid var(--color-primary);
+  border-radius: 8px;
+  color: var(--color-primary);
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.privacy-policy__phone:hover,
+.privacy-policy__contact-link:hover {
+  color: var(--color-cta-hover);
+}
+
+.privacy-policy__contact-link {
+  color: var(--color-cta);
+  font-weight: 600;
+}
+
 @media (max-width: 768px) {
   .privacy-policy {
     padding-top: 8px;
@@ -85,5 +108,9 @@
 
   .privacy-policy__section h2 {
     font-size: 18px;
+  }
+
+  .privacy-policy__phone {
+    font-size: 16px;
   }
 }

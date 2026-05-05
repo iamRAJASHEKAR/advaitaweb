@@ -19,6 +19,8 @@ export const strings = {
   header: {
     location: "#156, 7th cross ,1st Stage, #rd Block, Nagharbahvi,Bengaluru-72,India",
     phone: "+919036056006",
+    phoneDisplay: "+91 90360 56006",
+    mail: "advaitahygienesolutions@gmail.com",
     responseTimeLabel: "Response time",
     searchPlaceholder: "Search products…",
     searchAria: "Search products",
@@ -65,7 +67,6 @@ export const strings = {
   productCard: {
     priceSuffix: "/ piece",
     detailsCta: "Call now",
-  callNumber: "9036056006",
     quoteCta: "Get quote",
     sizesPrefix: "Sizes:",
     sizePrefix: "Size:",

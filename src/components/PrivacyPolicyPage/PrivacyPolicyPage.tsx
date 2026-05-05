@@ -1,4 +1,5 @@
 import "./PrivacyPolicyPage.css";
+import { strings } from "../../comms/strings";
 
 export function PrivacyPolicyPage() {
   return (
@@ -9,7 +10,7 @@ export function PrivacyPolicyPage() {
           <h1 className="privacy-policy__title">Privacy Policy</h1>
           <p className="privacy-policy__effective-date">Effective Date: February 28, 2026</p>
           <p className="privacy-policy__intro">
-            At Advaita Hyginie ("Company", "we", "us", "our"), we are committed to protecting the privacy of
+            At {strings.brand.name} ("Company", "we", "us", "our"), we are committed to protecting the privacy of
             business information shared with us. This Privacy Policy explains how we collect, use, store, and
             protect information when businesses interact with us through our website, phone, email, WhatsApp
             Business, and online advertising platforms.
@@ -165,13 +166,19 @@ export function PrivacyPolicyPage() {
             <h2>10. Contact Information</h2>
             <p>For questions, requests, or concerns regarding this Privacy Policy or your business data, please contact:</p>
             <p className="privacy-policy__contact">
-              <strong>Advaita Hyginie</strong>
+              <strong>{strings.brand.name}</strong>
               <br />
-              Email: [Insert official business email]
+              Phone:{" "}
+              <a className="privacy-policy__phone" href={`tel:${strings.header.phone}`}>
+                {strings.header.phoneDisplay}
+              </a>
               <br />
-              Phone: [Insert official business phone number]
+              Email:{" "}
+              <a className="privacy-policy__contact-link" href={`mailto:${strings.header.mail}`}>
+                {strings.header.mail}
+              </a>
               <br />
-              Address: [Insert registered business address, India]
+              Address: {strings.header.location}
             </p>
           </section>
         </div>

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Routes, Route, Navigate, useNavigate, useParams, useLocation, useMatch } from "react-router-dom";
+import { Routes, Route, Navigate, useNavigate, useParams, useLocation } from "react-router-dom";
 import "./App.css";
 import { catalogData, catalogUrl } from "./comms/comms";
 import { strings } from "./comms/strings";
@@ -55,8 +55,6 @@ function ProductPage({ onGetQuote, onRequestCallback }: ProductPageProps) {
     <ProductDetailPage
       key={product.id}
       product={product}
-      categories={catalogData.categories}
-      allProducts={catalogData.products}
       onBack={() => navigate("/")}
       onGetQuote={onGetQuote}
       onRequestCallback={onRequestCallback}
@@ -71,8 +69,6 @@ function App() {
   const [showCallbackModal, setShowCallbackModal] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
-  const productMatch = useMatch("/product/:id");
-  const productId = productMatch?.params?.id ?? null;
   const isProductPage = location.pathname.startsWith("/product/");
   const isComingSoonPage = location.pathname === "/coming-soon";
   const isPrivacyPolicyPage = location.pathname === "/privacypolicy" || location.pathname === "/privacy-policy";
@@ -106,16 +102,6 @@ function App() {
           onNavToSection={handleNavToSection}
           products={catalogData.products}
           onSelectProduct={handleProductClick}
-          productDetailMenu={
-            isProductPage && productId
-              ? {
-                categories: catalogData.categories,
-                allProducts: catalogData.products,
-                currentProductId: productId,
-                onSelectProduct: handleProductClick,
-              }
-              : null
-          }
         />
       )}
 
@@ -192,7 +178,7 @@ function App() {
 
       {!isComingSoonPage && !isPrivacyPolicyPage && (
         <a
-          href={`https://wa.me/91${strings.header.phone.replace(/\D/g, "")}`}
+          href={`https://wa.me/${strings.header.phone.replace(/\D/g, "")}`}
           target="_blank"
           rel="noopener noreferrer"
           className="whatsapp-fab"
