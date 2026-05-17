@@ -140,7 +140,7 @@ export const strings = {
     menuExpand: "Expand category",
     menuCollapse: "Collapse category",
     quoteCta: "Get Wholesale Quote",
-    callbackCta: "Request Callback",
+    callCta: "Call us now",
     pricePill: "Get Latest Price",
     minOrderLabel: "Minimum order quantity:",
     minOrderUnit: "Piece",
