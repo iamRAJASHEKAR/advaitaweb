@@ -1,17 +1,57 @@
 import { useState } from "react";
 import "./Forms.css";
 import { strings } from "../../comms/strings";
+import { submitProjectInterest } from "../../lib/supabaseClient";
 
 type FormProps = {
   onClose: () => void;
 };
 
-export function QuoteForm({ onClose }: FormProps) {
-  const [submitted, setSubmitted] = useState(false);
+const normalizePhone = (value: string) => value.replace(/[()\s-]/g, "");
+const phoneRegex = /^(?:\+91|91)?[6-9]\d{9}$/;
 
-  const handleSubmit = (e: React.FormEvent) => {
+export function QuoteForm({ onClose }: FormProps) {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSubmitted(true);
+    setError("");
+    setIsSubmitting(true);
+
+    const formData = new FormData(e.currentTarget);
+    const name = String(formData.get("name") || "").trim();
+    const phone = String(formData.get("phone") || "").trim();
+    const normalizedPhone = normalizePhone(phone);
+    const message = String(formData.get("message") || "").trim();
+
+    if (!phoneRegex.test(normalizedPhone)) {
+      setError("Enter a valid 10-digit mobile number.");
+      setIsSubmitting(false);
+      return;
+    }
+
+    try {
+      const result = await submitProjectInterest({
+        name,
+        phone: normalizedPhone,
+        project_name: "Quote Request",
+        message: message || undefined,
+        source_page: window.location.href,
+      });
+
+      if (!result.ok) {
+        setError(result.message);
+        return;
+      }
+
+      setSubmitted(true);
+    } catch {
+      setError("Unable to submit quote request.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (submitted) {
@@ -32,19 +72,20 @@ export function QuoteForm({ onClose }: FormProps) {
     <form className="form" onSubmit={handleSubmit}>
       <div className="form-group">
         <label htmlFor="quote-name">{strings.forms.quote.name}</label>
-        <input type="text" id="quote-name" name="name" required />
+        <input type="text" id="quote-name" name="name" required disabled={isSubmitting} />
       </div>
       <div className="form-group">
         <label htmlFor="quote-phone">{strings.forms.quote.phone}</label>
-        <input type="tel" id="quote-phone" name="phone" required />
+        <input type="tel" id="quote-phone" name="phone" required disabled={isSubmitting} />
       </div>
       <div className="form-group">
         <label htmlFor="quote-message">{strings.forms.quote.message}</label>
-        <textarea id="quote-message" name="message" rows={4} />
+        <textarea id="quote-message" name="message" rows={4} disabled={isSubmitting} />
       </div>
+      {error ? <p className="form-error">{error}</p> : null}
       <div className="form-actions">
-        <button type="submit" className="btn btn--primary">
-          {strings.forms.quote.submit}
+        <button type="submit" className="btn btn--primary" disabled={isSubmitting}>
+          {isSubmitting ? "Submitting..." : strings.forms.quote.submit}
         </button>
       </div>
     </form>

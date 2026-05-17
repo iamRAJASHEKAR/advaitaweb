@@ -27,6 +27,8 @@ nvm use 20
 
 ## Getting Started
 
+Form submissions sync to **advaitaadmin** via Supabase. See **`../supabase/README.md`**, then copy `.env.example` to `.env` with the same `VITE_SUPABASE_*` values as the admin app.
+
 Once you've upgraded Node.js, you can run the following commands:
 
 ### Development

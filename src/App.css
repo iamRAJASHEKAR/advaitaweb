@@ -213,6 +213,13 @@ main {
   box-shadow: 0 6px 18px rgba(10, 37, 64, 0.15);
 }
 
+.btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+  transform: none;
+  box-shadow: none;
+}
+
 .btn--lg {
   padding: 15.2px 32px;
   font-size: 16.8px;
