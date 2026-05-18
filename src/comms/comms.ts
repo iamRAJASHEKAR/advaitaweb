@@ -11,6 +11,7 @@ import type {
   ProductCategory,
   TrustMetric,
 } from "./types";
+import { assets } from "../assets/assets";
 
 const productImages = import.meta.glob("../assets/product-*.svg", {
   eager: true,
@@ -60,7 +61,9 @@ export const catalogData = {
   products: catalog.products.map(
     (product): Product => ({
       ...product,
-      images: [getProductImage(product.id)],
+      images: product.imagename
+        ? assets[product.imagename]
+        : [getProductImage(product.id)],
     }),
   ),
 };
