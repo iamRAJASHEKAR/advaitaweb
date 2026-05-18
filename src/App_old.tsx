@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import { assets } from "./assets/assets";
 
 export type ProductCategory = {
   id: string;
@@ -34,12 +35,8 @@ const products: Product[] = [
     id: "60l-ss-dustbin",
     name: "60L Stainless Steel Dust Bin",
     categoryId: "dustbins",
-    price: 2600,
-    images: [
-      "https://via.placeholder.com/600x600/0b1020/eab308?text=60L+Dustbin+Front",
-      "https://via.placeholder.com/600x600/0b1020/eab308?text=60L+Dustbin+Side",
-      "https://via.placeholder.com/600x600/0b1020/eab308?text=60L+Dustbin+Top",
-    ],
+    price: 2650,
+    images: assets.pedal,
     capacity: "60 Liters",
     material: "Stainless Steel",
     color: "Silver / Matte Black",

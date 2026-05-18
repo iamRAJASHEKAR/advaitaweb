@@ -1,3 +1,5 @@
+import type { AssetName } from "../assets/assets";
+
 export type ProductCategory = {
   id: string;
   name: string;
@@ -25,6 +27,7 @@ export type Product = {
   description: string;
   features: string[];
   minimumOrder?: number;
+  imagename?: AssetName;
 };
 
 export type TrustMetric = {

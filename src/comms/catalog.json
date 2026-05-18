@@ -14,9 +14,18 @@
     }
   ],
   "trustMetrics": [
-    { "value": "15+", "label": "Years as wholesaler & distributor" },
-    { "value": "500+", "label": "Partners supplied (incl. institutions & corporate)" },
-    { "value": "98%", "label": "On-time dispatch performance" }
+    {
+      "value": "15+",
+      "label": "Years as wholesaler & distributor"
+    },
+    {
+      "value": "500+",
+      "label": "Partners supplied (incl. institutions & corporate)"
+    },
+    {
+      "value": "98%",
+      "label": "On-time dispatch performance"
+    }
   ],
   "differentiators": [
     {
@@ -51,14 +60,38 @@
     }
   ],
   "industries": [
-    { "name": "Corporate Offices", "icon": "🏢" },
-    { "name": "Hospitals & Clinics", "icon": "🏥" },
-    { "name": "Hotels & Hospitality", "icon": "🏨" },
-    { "name": "Educational Institutions", "icon": "🎓" },
-    { "name": "Manufacturing & Factories", "icon": "🏭" },
-    { "name": "Retail Chains", "icon": "🛍" },
-    { "name": "Government Facilities", "icon": "🏛" },
-    { "name": "Data Centers", "icon": "🖥" }
+    {
+      "name": "Corporate Offices",
+      "icon": "🏢"
+    },
+    {
+      "name": "Hospitals & Clinics",
+      "icon": "🏥"
+    },
+    {
+      "name": "Hotels & Hospitality",
+      "icon": "🏨"
+    },
+    {
+      "name": "Educational Institutions",
+      "icon": "🎓"
+    },
+    {
+      "name": "Manufacturing & Factories",
+      "icon": "🏭"
+    },
+    {
+      "name": "Retail Chains",
+      "icon": "🛍"
+    },
+    {
+      "name": "Government Facilities",
+      "icon": "🏛"
+    },
+    {
+      "name": "Data Centers",
+      "icon": "🖥"
+    }
   ],
   "processSteps": [
     {
@@ -139,51 +172,100 @@
   "products": [
     {
       "id": "60l-ss-dustbin",
-      "name": "60L Stainless Steel Dust Bin",
+      "name": "Stainless Steel perforated Dust Bin",
       "categoryId": "waste",
-      "price": 2600,
-      "capacity": "60 Liters",
+      "price": 260,
+      "capacity": "5 Liters to 60 Liters",
       "material": "Stainless Steel",
       "color": "Silver / Matte Black",
       "structure": "Round Open Top",
       "usage": "Outdoor, Office, Industrial",
-      "size": "14\" x 28\"",
-      "grade": "SS 304",
-      "finish": "Polished / Matte",
-      "description": "Premium 60-liter stainless steel dustbin designed for high-traffic commercial spaces. Built with corrosion-resistant SS 304 grade steel for long-lasting durability. Ideal for offices, hospitals, manufacturing facilities, and outdoor installations. Features a smooth polished finish that's easy to clean and maintain.",
+      "size": "5L, 10L , 15L ,20L , 25L , 30L , 40L ",
+      "grade": "SS 202/SS 304",
+      "finish": "Polished",
+      "description": "Premium Perforated stainless steel dustbin designed for indoor , outdoor and  commercial spaces. Built with corrosion-resistant SS202/SS304 grade steel for long-lasting durability. Ideal for offices, hospitals, manufacturing facilities, and outdoor installations. Features a smooth polished finish that's easy to clean and maintain.",
       "features": [
-        "Corrosion-resistant SS 304 grade construction",
+        "Corrosion-resistant SS202/SS304 grade construction",
         "Scratch-proof rubber ring at the bottom",
         "Easy-clean polished surface",
         "Weather-resistant for outdoor use",
         "Sturdy round design for stability",
         "Suitable for high-traffic areas"
       ],
-      "minimumOrder": 2
+      "minimumOrder": 10,
+      "imagename": "perforate"
     },
     {
       "id": "pedal-dustbin-25l",
       "name": "Stainless Steel Pedal Waste Bin 25L",
       "categoryId": "waste",
-      "price": 780,
-      "capacity": "25 Liters",
+      "price": 450,
+      "capacity": "5 Liters to 22 Liters",
       "material": "Stainless Steel",
       "color": "Silver",
       "structure": "Foot Pedal with Lid",
       "usage": "Office, Hospital, Residential",
-      "size": "12\" x 18\"",
+      "size": "7 x 10 (5L), 8 x 12 (7L),10 x 14 (11L) , 12 x 20 (20L)",
       "grade": "SS 202",
       "finish": "Polished",
       "description": "Hygienic foot-pedal operated dustbin with smooth operation and durable construction. Perfect for environments requiring hands-free waste disposal. Features a tight-fitting lid to contain odors and maintain cleanliness.",
       "features": [
         "Hands-free foot pedal operation",
         "Tight-fitting lid for odor control",
-        "SS 202 grade construction",
+        "SS 202/ SS 304 grade construction",
         "Polished stainless steel finish",
         "Non-slip rubber base",
         "Easy to clean and maintain"
       ],
-      "minimumOrder": 10
+      "minimumOrder": 10,
+      "imagename": "pedal"
+    },
+    {
+      "id": "ss-swing-dustbin",
+      "name": "Stainless Steel Swing Dustbin",
+      "categoryId": "waste",
+     "price": 550,
+      "capacity": "5 Liters to 70 Liters",
+      "material": "SS202/SS304",
+      "color": "Silver / Matte Black",
+      "structure": "Swing lid",
+      "usage": "Indoor , outdoor ,Offices, Malls, Factories",
+      "size": "7L, 10L, 18L , 30L,50L , 70L",
+      "grade": "SS 202/SS 304",
+      "finish": "Polished",
+      "description": "Heavy-duty stainless steel dustbin with polished finish for aesthetic and hygienic waste disposal.",
+      "features": [
+        "Premium SS 304 construction",
+        "Mirror-polished finish",
+        "Non-slip rubber base",
+        "Easy to clean",
+        "High-capacity design"
+      ],
+      "minimumOrder":10,
+      "imagename": "swing"   
+    },
+    {
+      "id": "stainless-steel-dustbin",
+      "name": "Stainless Steel Dustbin",
+      "categoryId": "waste",
+      "price": 550,
+      "capacity": "5 Liters to 70 Liters",
+      "material": "SS202/SS304",
+      "color": "Silver / Matte Black",
+      "structure": "Swing lid",
+      "usage": "Indoor , outdoor ,Offices, Malls, Factories",
+      "size": "7L, 10L, 18L , 30L,50L , 70L",
+      "grade": "SS 202/SS 304",
+      "finish": "Polished",
+      "description": "Heavy-duty stainless steel dustbin with polished finish for aesthetic and hygienic waste disposal.",
+      "features": [
+        "Premium SS 304 construction",
+        "Mirror-polished finish",
+        "Non-slip rubber base",
+        "Easy to clean",
+        "High-capacity design"
+      ],
+      "minimumOrder":10
     },
     {
       "id": "auto-foam-dispenser",
@@ -191,7 +273,11 @@
       "categoryId": "washroom",
       "price": 2450,
       "capacity": "1000 ml",
-      "sizes": ["500 ml", "1000 ml", "1200 ml"],
+      "sizes": [
+        "500 ml",
+        "1000 ml",
+        "1200 ml"
+      ],
       "material": "ABS + SS304 Nozzle",
       "color": "White / Chrome",
       "structure": "Wall Mount, Auto Sensor",
@@ -493,29 +579,6 @@
       "minimumOrder": 3
     },
     {
-      "id": "stainless-steel-dustbin",
-      "name": "Stainless Steel Dustbin",
-      "categoryId": "waste",
-      "price": 2400,
-      "capacity": "50 Liters",
-      "material": "Stainless Steel 304",
-      "color": "Silver",
-      "structure": "Open Top",
-      "usage": "Offices, Malls, Factories",
-      "size": "13\" x 26\"",
-      "grade": "SS 304",
-      "finish": "Polished",
-      "description": "Heavy-duty stainless steel dustbin with polished finish for aesthetic and hygienic waste disposal.",
-      "features": [
-        "Premium SS 304 construction",
-        "Mirror-polished finish",
-        "Non-slip rubber base",
-        "Easy to clean",
-        "High-capacity design"
-      ],
-      "minimumOrder": 3
-    },
-    {
       "id": "heavy-duty-wringer-trolley",
       "name": "Heavy Duty Double Bucket Wringer Trolley",
       "categoryId": "waste",
@@ -559,29 +622,6 @@
         "Budget-friendly option"
       ],
       "minimumOrder": 2
-    },
-    {
-      "id": "ss-swing-dustbin",
-      "name": "Stainless Steel Swing Dustbin",
-      "categoryId": "waste",
-      "price": 1850,
-      "capacity": "40 Liters",
-      "material": "Stainless Steel 202",
-      "color": "Silver",
-      "structure": "Swing Top Lid",
-      "usage": "Offices, Canteens, Cafeterias",
-      "size": "12\" x 12\" x 24\"",
-      "grade": "SS 202",
-      "finish": "Matte",
-      "description": "Space-saving swing-top stainless steel bin designed for compact spaces while maintaining easy waste access.",
-      "features": [
-        "Swing-top lid design",
-        "Space-efficient structure",
-        "SS 202 construction",
-        "Self-closing mechanism",
-        "Easy to empty and clean"
-      ],
-      "minimumOrder": 5
     },
     {
       "id": "ss-trio-bin",

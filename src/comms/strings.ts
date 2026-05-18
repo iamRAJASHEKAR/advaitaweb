@@ -17,7 +17,7 @@ export const strings = {
     quote: "Get Wholesale Quote",
   },
   header: {
-    location: "#156, 7th cross ,1st Stage, #rd Block, Nagharbahvi,Bengaluru-72,India",
+    location: "No. 92/A ,4th Main Road, ITI Layout ,Nayandahalli , Banglore south , 560039",
     phone: "+919036056006",
     phoneDisplay: "+91 90360 56006",
     mail: "advaitahygienesolutions@gmail.com",
