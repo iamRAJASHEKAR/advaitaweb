@@ -17,7 +17,7 @@ export const strings = {
     quote: "Get Wholesale Quote",
   },
   header: {
-    location: "No. 92/A ,4th Main Road, ITI Layout ,Nayandahalli , Banglore south , 560039",
+    location: "92-A, ITI HBCS Layout, Chandra Layout Extension II Stage, Chandra Layout, Bengaluru, Karnataka 560039",
     phone: "+919036056006",
     phoneDisplay: "+91 90360 56006",
     mail: "advaitahygienesolutions@gmail.com",
