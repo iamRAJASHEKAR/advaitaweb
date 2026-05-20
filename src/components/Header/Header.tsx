@@ -14,6 +14,8 @@ export type ProductDetailMenuConfig = {
 type HeaderProps = {
   onHome: () => void;
   onCatalog: () => void;
+  onAboutUs: () => void;
+  onContactUs: () => void;
   onPrivacyPolicy: () => void;
   onNavToSection: (sectionId: string) => void;
   products: Product[];
@@ -25,6 +27,8 @@ type HeaderProps = {
 export function Header({
   onHome,
   onCatalog,
+  onAboutUs,
+  onContactUs,
   onPrivacyPolicy,
   onNavToSection,
   products,
@@ -106,7 +110,7 @@ export function Header({
 
   const handleNavAboutUs = () => {
     closeMenu();
-    onNavToSection("why-ahs");
+    onAboutUs();
   };
 
   const handleNavCatalog = () => {
@@ -121,7 +125,7 @@ export function Header({
 
   const handleNavContactUs = () => {
     closeMenu();
-    onNavToSection("contact-us");
+    onContactUs();
   };
 
   const handleSelectProduct = (id: string) => {

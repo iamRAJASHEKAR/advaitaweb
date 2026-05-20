@@ -10,7 +10,8 @@ export function PrivacyPolicyPage() {
           <h1 className="privacy-policy__title">Privacy Policy</h1>
           <p className="privacy-policy__effective-date">Effective Date: February 28, 2026</p>
           <p className="privacy-policy__intro">
-            At {strings.brand.name} ("Company", "we", "us", "our"), we are committed to protecting the privacy of
+            At {strings.company.legalName} trading as {strings.brand.name} ("Company", "we", "us", "our"), we are
+            committed to protecting the privacy of
             business information shared with us. This Privacy Policy explains how we collect, use, store, and
             protect information when businesses interact with us through our website, phone, email, WhatsApp
             Business, and online advertising platforms.
@@ -166,7 +167,11 @@ export function PrivacyPolicyPage() {
             <h2>10. Contact Information</h2>
             <p>For questions, requests, or concerns regarding this Privacy Policy or your business data, please contact:</p>
             <p className="privacy-policy__contact">
-              <strong>{strings.brand.name}</strong>
+              <strong>{strings.company.legalName}</strong>
+              <br />
+              Trading as: {strings.brand.name}
+              <br />
+              {strings.company.gstLabel}: {strings.company.gstNumber}
               <br />
               Phone:{" "}
               <a className="privacy-policy__phone" href={`tel:${strings.header.phone}`}>

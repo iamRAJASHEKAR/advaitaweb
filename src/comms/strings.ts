@@ -5,16 +5,35 @@ export const strings = {
     subtitleLine2: "Washroom • Cleaning • Waste Management Solutions",
     logoAlt: "Advaita Hygiene logo",
   },
+  company: {
+    legalName: "ADVAITA HYGIENE SOLUTIONS PRIVATE LIMITED",
+    gstNumber: "29ABECA8426C1ZQ",
+    gstLabel: "GSTIN",
+    cinLabel: "Private Limited Company (India)",
+  },
   nav: {
     products: "Products",
     aboutUs: "About Us",
     why: "Why AHS",
     process: "Process",
-    contactUs: "Contact us",
+    contactUs: "Contact Us",
     catalog: "Catalog",
     catalogue: "Catalogue",
     privacyPolicy: "Privacy Policy",
+    termsOfService: "Terms of Service",
     quote: "Get Wholesale Quote",
+  },
+  footer: {
+    tagline:
+      "Wholesale distributor of washroom, cleaning, and waste management products for retailers, distributors, and institutions in Bengaluru and across Karnataka.",
+    companyHeading: "Company",
+    linksHeading: "Quick links",
+    legalHeading: "Legal",
+    contactHeading: "Contact",
+    copyright: (year: number, legalName: string) =>
+      `© ${year} ${legalName}. All rights reserved.`,
+    disclaimer:
+      "Prices and availability are subject to confirmation at quotation. Product images are representative; specifications may vary by batch.",
   },
   header: {
     location: "92-A, ITI HBCS Layout, Chandra Layout Extension II Stage, Chandra Layout, Bengaluru, Karnataka 560039",

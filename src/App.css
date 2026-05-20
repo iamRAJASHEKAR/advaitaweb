@@ -1,6 +1,8 @@
 @import "./theme/variables.css";
 
 .page {
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
   background: var(--color-bg-main);
   color: var(--color-text-primary);
@@ -20,6 +22,7 @@
 }
 
 main {
+  flex: 1;
   overflow-x: hidden;
   max-width: 100%;
 }

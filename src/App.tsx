@@ -16,6 +16,10 @@ import { TrustSection } from "./components/TrustSection/TrustSection";
 import { ProductDetailPage } from "./components/ProductDetailPage/ProductDetailPage";
 import { ComingSoonPage } from "./components/ComingSoonPage/ComingSoonPage";
 import { PrivacyPolicyPage } from "./components/PrivacyPolicyPage/PrivacyPolicyPage";
+import { AboutUsPage } from "./components/AboutUsPage/AboutUsPage";
+import { ContactPage } from "./components/ContactPage/ContactPage";
+import { TermsOfServicePage } from "./components/TermsOfServicePage/TermsOfServicePage";
+import { Footer } from "./components/Footer/Footer";
 import { Modal } from "./components/Modal/Modal";
 import { QuoteForm } from "./components/Forms/QuoteForm";
 
@@ -67,7 +71,12 @@ function App() {
   const location = useLocation();
   const isProductPage = location.pathname.startsWith("/product/");
   const isComingSoonPage = location.pathname === "/coming-soon";
-  const isPrivacyPolicyPage = location.pathname === "/privacypolicy" || location.pathname === "/privacy-policy";
+  const scrollToTop = () => window.scrollTo(0, 0);
+
+  const goTo = (path: string) => {
+    navigate(path);
+    scrollToTop();
+  };
 
   const handleProductClick = (productId: string) => {
     navigate(`/product/${productId}`);
@@ -89,12 +98,11 @@ function App() {
     <div className={`page${isProductPage ? " page--product-detail" : ""}`}>
       {!isComingSoonPage && (
         <Header
-          onHome={() => navigate("/")}
+          onHome={() => goTo("/")}
           onCatalog={handleSeeAllProducts}
-          onPrivacyPolicy={() => {
-            navigate("/privacypolicy");
-            window.scrollTo(0, 0);
-          }}
+          onAboutUs={() => goTo("/about")}
+          onContactUs={() => goTo("/contact")}
+          onPrivacyPolicy={() => goTo("/privacypolicy")}
           onNavToSection={handleNavToSection}
           products={catalogData.products}
           onSelectProduct={handleProductClick}
@@ -144,11 +152,33 @@ function App() {
               />
             }
           />
+          <Route path="/about" element={<AboutUsPage />} />
+          <Route path="/contact" element={<ContactPage onGetQuote={() => setShowQuoteModal(true)} />} />
           <Route path="/privacypolicy" element={<PrivacyPolicyPage />} />
           <Route path="/privacy-policy" element={<Navigate to="/privacypolicy" replace />} />
+          <Route path="/terms" element={<TermsOfServicePage />} />
           <Route path="/coming-soon" element={<ComingSoonPage />} />
         </Routes>
       </main>
+
+      {!isComingSoonPage && (
+        <Footer
+          onHome={() => goTo("/")}
+          onAbout={() => goTo("/about")}
+          onContact={() => goTo("/contact")}
+          onPrivacy={() => goTo("/privacypolicy")}
+          onTerms={() => goTo("/terms")}
+          onCatalog={handleSeeAllProducts}
+          onProducts={() => {
+            if (location.pathname === "/") {
+              handleNavToSection("solutions");
+            } else {
+              goTo("/");
+              setTimeout(() => handleNavToSection("solutions"), 150);
+            }
+          }}
+        />
+      )}
 
       {showQuoteModal && (
         <Modal
@@ -160,7 +190,7 @@ function App() {
         </Modal>
       )}
 
-      {!isComingSoonPage && !isPrivacyPolicyPage && (
+      {!isComingSoonPage && (
         <>
           <a
             href={`https://wa.me/${strings.header.phone.replace(/\D/g, "")}`}
