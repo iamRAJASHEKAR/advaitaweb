@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./Forms.css";
 import { strings } from "../../comms/strings";
 import { submitProjectInterest } from "../../lib/supabaseClient";
+import { FormLeadConsent } from "../FormLeadConsent/FormLeadConsent";
 
 type FormProps = {
   onClose: () => void;
@@ -25,6 +26,13 @@ export function QuoteForm({ onClose }: FormProps) {
     const phone = String(formData.get("phone") || "").trim();
     const normalizedPhone = normalizePhone(phone);
     const message = String(formData.get("message") || "").trim();
+    const consent = formData.get("consent");
+
+    if (!consent) {
+      setError(strings.forms.consentRequired);
+      setIsSubmitting(false);
+      return;
+    }
 
     if (!phoneRegex.test(normalizedPhone)) {
       setError("Enter a valid 10-digit mobile number.");
@@ -82,6 +90,7 @@ export function QuoteForm({ onClose }: FormProps) {
         <label htmlFor="quote-message">{strings.forms.quote.message}</label>
         <textarea id="quote-message" name="message" rows={4} disabled={isSubmitting} />
       </div>
+      <FormLeadConsent disabled={isSubmitting} />
       {error ? <p className="form-error">{error}</p> : null}
       <div className="form-actions">
         <button type="submit" className="btn btn--primary" disabled={isSubmitting}>

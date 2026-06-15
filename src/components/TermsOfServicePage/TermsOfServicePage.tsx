@@ -1,6 +1,5 @@
 import "../PrivacyPolicyPage/PrivacyPolicyPage.css";
 import { strings } from "../../comms/strings";
-
 export function TermsOfServicePage() {
   return (
     <section className="shell privacy-policy">
@@ -31,7 +30,7 @@ export function TermsOfServicePage() {
             <p>
               Prices displayed on the website or in marketing materials are indicative unless confirmed in
               a written quotation. Final price, taxes, freight, and minimum order quantities are confirmed
-              at quotation and invoice stage. {strings.company.gstLabel}: {strings.company.gstNumber}.
+              at quotation and invoice stage. {strings.company.gstLabel} {strings.company.gstNumber}.
             </p>
           </section>
 
@@ -90,9 +89,19 @@ export function TermsOfServicePage() {
           </section>
 
           <section className="privacy-policy__section">
-            <h2>9. Contact</h2>
+            <h2>9. Contact Information</h2>
+            <p>
+              For questions, requests, or concerns regarding these Terms of Service or your business orders,
+              please contact:
+            </p>
             <p className="privacy-policy__contact">
               <strong>{strings.company.legalName}</strong>
+              <br />
+              Trading as: {strings.brand.name}
+              <br />
+              {strings.company.gstLabel} {strings.company.gstNumber}
+              <br />
+              {strings.company.cinLabel} {strings.company.cinNumber}
               <br />
               Phone:{" "}
               <a className="privacy-policy__phone" href={`tel:${strings.header.phone}`}>
@@ -112,3 +121,4 @@ export function TermsOfServicePage() {
     </section>
   );
 }
+

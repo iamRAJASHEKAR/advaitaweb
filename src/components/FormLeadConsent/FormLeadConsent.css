@@ -1,0 +1,28 @@
+.form-consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 0;
+  cursor: pointer;
+}
+
+.form-consent input {
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.form-consent__text {
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--color-text-secondary);
+}
+
+.form-consent__text strong {
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.form-consent__text a {
+  color: var(--color-cta);
+  font-weight: 600;
+}

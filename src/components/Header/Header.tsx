@@ -13,23 +13,17 @@ export type ProductDetailMenuConfig = {
 
 type HeaderProps = {
   onHome: () => void;
-  onCatalog: () => void;
-  onAboutUs: () => void;
   onContactUs: () => void;
-  onPrivacyPolicy: () => void;
   onNavToSection: (sectionId: string) => void;
   products: Product[];
   onSelectProduct: (id: string) => void;
-  /** When set, hamburger opens product-by-category menu (detail page). Otherwise opens main nav (Products, About, Catalogue). */
+  /** When set, hamburger opens product-by-category menu (detail page). Otherwise opens main nav. */
   productDetailMenu?: ProductDetailMenuConfig | null;
 };
 
 export function Header({
   onHome,
-  onCatalog,
-  onAboutUs,
   onContactUs,
-  onPrivacyPolicy,
   onNavToSection,
   products,
   onSelectProduct,
@@ -108,21 +102,6 @@ export function Header({
     onNavToSection("solutions");
   };
 
-  const handleNavAboutUs = () => {
-    closeMenu();
-    onAboutUs();
-  };
-
-  const handleNavCatalog = () => {
-    closeMenu();
-    onCatalog();
-  };
-
-  const handleNavPrivacyPolicy = () => {
-    closeMenu();
-    onPrivacyPolicy();
-  };
-
   const handleNavContactUs = () => {
     closeMenu();
     onContactUs();
@@ -140,7 +119,16 @@ export function Header({
 
   return (
     <header className="shell header">
-      <div className="header__top">
+      <div className="header__utility" aria-label="Contact">
+        <a className="header__utility-link" href={`tel:${strings.header.phone}`}>
+          {strings.header.phoneDisplay}
+        </a>
+        <a className="header__utility-link" href={`mailto:${strings.header.mail}`}>
+          {strings.header.mail}
+        </a>
+      </div>
+
+      <div className="header__main-row">
         <button
           type="button"
           className="header__hamburger"
@@ -157,7 +145,7 @@ export function Header({
           <div className="brand__mark">
             <img src={logo} alt={strings.brand.logoAlt} className="brand__logo" />
           </div>
-          <div>
+          <div className="brand__text">
             <h1 className="brand__title">{strings.brand.name}</h1>
             <div className="brand__subtitle-wrap">
               <p className="brand__subtitle brand__subtitle--line1">{strings.brand.subtitleLine1}</p>
@@ -166,44 +154,34 @@ export function Header({
           </div>
         </div>
 
-      </div>
-
-      <div className="header__nav-row">
-        <nav className="nav">
+        <nav className="nav header__nav-inline" aria-label="Main navigation">
           <button type="button" className="nav__link-btn" onClick={handleNavProducts}>
             {strings.nav.products}
           </button>
-          <button type="button" className="nav__link-btn" onClick={handleNavAboutUs}>
+          <button type="button" className="nav__link-btn" onClick={() => onNavToSection("why-ahs")}>
             {strings.nav.why}
           </button>
           <button type="button" className="nav__link-btn" onClick={() => onNavToSection("process")}>
             {strings.nav.process}
           </button>
-          <button type="button" className="nav__link-btn" onClick={onPrivacyPolicy}>
-            {strings.nav.privacyPolicy}
-          </button>
           <button type="button" className="nav__link-btn" onClick={handleNavContactUs}>
             {strings.nav.contactUs}
           </button>
         </nav>
-        <div className="header__nav-actions">
-          <button type="button" className="btn btn--outline btn--sm" onClick={onCatalog}>
-            {strings.nav.catalog}
+
+        <div className="header__search">
+          <button
+            type="button"
+            className="header__search-toggle"
+            onClick={() => setSearchOpen((o) => !o)}
+            aria-label={strings.header.searchAria}
+            aria-expanded={searchOpen}
+          >
+            <svg className="header__search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <circle cx="11" cy="11" r="8" />
+              <path d="m21 21-4.35-4.35" />
+            </svg>
           </button>
-          <div className="header__search">
-            <button
-              type="button"
-              className="header__search-toggle"
-              onClick={() => setSearchOpen((o) => !o)}
-              aria-label={strings.header.searchAria}
-              aria-expanded={searchOpen}
-            >
-              <svg className="header__search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <circle cx="11" cy="11" r="8" />
-                <path d="m21 21-4.35-4.35" />
-              </svg>
-            </button>
-          </div>
         </div>
       </div>
 
@@ -325,17 +303,28 @@ export function Header({
               <button type="button" className="header__drawer-item" onClick={handleNavProducts}>
                 {strings.nav.products}
               </button>
-              <button type="button" className="header__drawer-item" onClick={handleNavAboutUs}>
-                {strings.nav.aboutUs}
+              <button
+                type="button"
+                className="header__drawer-item"
+                onClick={() => {
+                  closeMenu();
+                  onNavToSection("why-ahs");
+                }}
+              >
+                {strings.nav.why}
               </button>
-              <button type="button" className="header__drawer-item" onClick={handleNavPrivacyPolicy}>
-                {strings.nav.privacyPolicy}
+              <button
+                type="button"
+                className="header__drawer-item"
+                onClick={() => {
+                  closeMenu();
+                  onNavToSection("process");
+                }}
+              >
+                {strings.nav.process}
               </button>
               <button type="button" className="header__drawer-item" onClick={handleNavContactUs}>
                 {strings.nav.contactUs}
-              </button>
-              <button type="button" className="header__drawer-item" onClick={handleNavCatalog}>
-                {strings.nav.catalogue}
               </button>
             </nav>
           )}

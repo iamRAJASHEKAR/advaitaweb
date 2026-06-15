@@ -1,5 +1,6 @@
 import "./PrivacyPolicyPage.css";
 import { strings } from "../../comms/strings";
+import { LegalIdentityNotice } from "../LegalIdentityNotice/LegalIdentityNotice";
 
 export function PrivacyPolicyPage() {
   return (
@@ -46,6 +47,11 @@ export function PrivacyPolicyPage() {
               <li>Engage with our online advertisements (such as Google Ads or LinkedIn)</li>
               <li>Request quotations, product details, demos, callbacks, or commercial proposals</li>
             </ul>
+            <p>
+              When you submit a quote or enquiry form on our website, you must confirm consent to be
+              contacted and acknowledge this Privacy Policy and our Terms of Service before we process
+              your request.
+            </p>
           </section>
 
           <section className="privacy-policy__section">
@@ -171,7 +177,9 @@ export function PrivacyPolicyPage() {
               <br />
               Trading as: {strings.brand.name}
               <br />
-              {strings.company.gstLabel}: {strings.company.gstNumber}
+              {strings.company.gstLabel} {strings.company.gstNumber}
+              <br />
+              {strings.company.cinLabel} {strings.company.cinNumber}
               <br />
               Phone:{" "}
               <a className="privacy-policy__phone" href={`tel:${strings.header.phone}`}>

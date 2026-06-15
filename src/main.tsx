@@ -5,6 +5,10 @@ import App from "./App";
 import "./index.css";
 import { ComingSoonPage } from "./components/ComingSoonPage/ComingSoonPage";
 
+document
+  .getElementById("crawlable-home-summary")
+  ?.classList.add("crawlable-home-summary--mounted");
+
 const rootElement = document.getElementById("root");
 
 if (!rootElement) {

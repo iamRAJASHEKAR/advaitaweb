@@ -40,6 +40,33 @@
   margin-top: 8px;
 }
 
+.lead-section__actions--equal {
+  flex-direction: column;
+  max-width: 340px;
+}
+
+.lead-section__actions--equal .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.lead-section__actions--equal .btn--whatsapp {
+  background: #25d366;
+  color: #fff;
+  border-color: #25d366;
+}
+
+.lead-section__actions--equal .btn--whatsapp:hover {
+  background: #1faa50;
+  border-color: #1faa50;
+  color: #fff;
+}
+
 .lead-card {
   background: var(--color-bg-main);
   border: 1px solid var(--color-border-light);
@@ -52,6 +79,20 @@
   padding: 18px;
   border-radius: 10px;
   box-shadow: 0 8px 22px rgba(10, 37, 64, 0.08);
+}
+
+.lead-card--homepage {
+  padding: 0;
+  border: none;
+  box-shadow: none;
+  background: transparent;
+}
+
+.lead-card__form-label {
+  margin: 0 0 12px;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-primary);
 }
 
 .lead-card__header {

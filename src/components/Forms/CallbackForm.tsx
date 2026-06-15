@@ -2,6 +2,8 @@ import { useState } from "react";
 import "./Forms.css";
 import { strings } from "../../comms/strings";
 import { submitProjectInterest } from "../../lib/supabaseClient";
+import { LegalIdentityNotice } from "../LegalIdentityNotice/LegalIdentityNotice";
+import { FormLeadConsent } from "../FormLeadConsent/FormLeadConsent";
 
 type FormProps = {
   onClose: () => void;
@@ -26,6 +28,13 @@ export function CallbackForm({ onClose }: FormProps) {
     const normalizedPhone = normalizePhone(phone);
     const preferredTime = String(formData.get("preferredTime") || "");
     const requirement = String(formData.get("message") || "");
+    const consent = formData.get("consent");
+
+    if (!consent) {
+      setError(strings.forms.consentRequired);
+      setIsSubmitting(false);
+      return;
+    }
 
     if (!phoneRegex.test(normalizedPhone)) {
       setError("Enter a valid 10-digit mobile number.");
@@ -76,6 +85,7 @@ export function CallbackForm({ onClose }: FormProps) {
 
   return (
     <form className="form" onSubmit={handleSubmit}>
+      <LegalIdentityNotice variant="compact" />
       <div className="form-group">
         <label htmlFor="cb-name">{strings.forms.callback.name}</label>
         <input type="text" id="cb-name" name="name" required disabled={isSubmitting} />
@@ -98,6 +108,7 @@ export function CallbackForm({ onClose }: FormProps) {
         <label htmlFor="cb-message">{strings.forms.callback.message}</label>
         <textarea id="cb-message" name="message" rows={3} disabled={isSubmitting} />
       </div>
+      <FormLeadConsent disabled={isSubmitting} />
       {error ? <p className="form-error">{error}</p> : null}
       <div className="form-actions">
         <button type="button" onClick={onClose} className="btn btn--outline" disabled={isSubmitting}>

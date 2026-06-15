@@ -8,7 +8,7 @@ type WhyChooseSectionProps = {
 
 export function WhyChooseSection({ differentiators }: WhyChooseSectionProps) {
   return (
-    <section className="shell section">
+    <section id="why-ahs" className="shell section why-choose-section">
       <div className="section__header">
         <div> 
           <p className="eyebrow">{strings.why.eyebrow}</p>

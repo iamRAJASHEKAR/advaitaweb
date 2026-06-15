@@ -8,7 +8,7 @@ type ProcessSectionProps = {
 
 export function ProcessSection({ steps }: ProcessSectionProps) {
   return (
-    <section id="process" className="shell section">
+    <section id="process" className="shell section process-section">
       <div className="section__header">
         <div>
           <p className="eyebrow">{strings.process.eyebrow}</p>
