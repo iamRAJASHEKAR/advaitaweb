@@ -46,3 +46,41 @@ img {
   max-width: 100%;
   vertical-align: middle;
 }
+
+/* Crawlable summary in index.html for search indexing; visually hidden after app mount */
+.crawlable-home-summary {
+  margin: 0;
+  padding: 10px 16px;
+  background: #0b3d5c;
+  color: #fff;
+  font-family: system-ui, sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.crawlable-home-summary h1 {
+  margin: 0 0 6px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.crawlable-home-summary p {
+  margin: 0 0 4px;
+}
+
+.crawlable-home-summary a {
+  color: #fff;
+}
+
+.crawlable-home-summary--mounted {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

@@ -5,22 +5,99 @@ export const strings = {
     subtitleLine2: "Washroom • Cleaning • Waste Management Solutions",
     logoAlt: "Advaita Hygiene logo",
   },
+  company: {
+    legalName: "Advaita Hygiene Solutions Private Limited",
+    gstNumber: "29ABECA8426C1ZQ",
+    gstLabel: "GST No:",
+    cinNumber: "U20235KA2026PTC215622",
+    cinLabel: "CIN:",
+    serviceArea:
+      "Bengaluru and Karnataka (primary); wholesale dispatch to retailers, distributors, and institutions across India on confirmed orders.",
+  },
+  businessOverview: {
+    eyebrow: "About our business",
+    title: "Wholesale hygiene supply for commercial buyers",
+    intro:
+      "Advaita Hygiene Solutions Private Limited is a registered wholesaler and distributor of washroom hygiene, cleaning chemicals, waste management bins, dispensers, and facility supplies. We serve retailers, distributors, corporate offices, hospitals, hotels, and institutions with bulk quotations, GST billing, and coordinated dispatch.",
+    serviceAreaHeading: "Service area",
+    categoriesHeading: "Product categories we supply",
+    contactHeading: "Business contact",
+    policiesNote:
+      "We publish our Privacy Policy and Terms of Service for transparency on enquiries, orders, and data use.",
+  },
+  homepageCompliance: {
+    title: "Registered wholesaler — business information",
+    policiesHeading: "Policies & enquiries",
+    shortIntro:
+      "B2B wholesale quotes for washroom, waste management, and cleaning products — Bengaluru & across India.",
+    leadDisclosure:
+      "By submitting, you agree we may contact you about your enquiry per our Privacy Policy and Terms.",
+  },
+  contactPage: {
+    intro1:
+      "Get in touch with Advaita Hygiene Solutions Private Limited for wholesale enquiries, bulk orders, product availability, pricing, and business support. Our team is committed to providing prompt assistance and helping you find the right hygiene solutions for your organization.",
+    intro2:
+      "Whether you are a distributor, dealer, facility management company, institution, or corporate buyer, we are here to assist you with reliable products and professional service.",
+    businessHoursHeading: "Business Hours:",
+    businessHoursBody:
+      "We respond to all enquiries during our working hours and strive to provide timely support for your requirements.",
+    tagline:
+      "Partner with Advaita Hygiene Solutions – Delivering Quality Hygiene Products Across Industries.",
+  },
   nav: {
     products: "Products",
     aboutUs: "About Us",
     why: "Why AHS",
     process: "Process",
-    contactUs: "Contact us",
+    contactUs: "Reach us",
     catalog: "Catalog",
     catalogue: "Catalogue",
     privacyPolicy: "Privacy Policy",
+    termsOfService: "Terms of Service",
     quote: "Get Wholesale Quote",
+  },
+  footer: {
+    tagline:
+      "Wholesale distributor of washroom, cleaning, and waste management products for retailers, distributors, and institutions in Bengaluru and across Karnataka.",
+    companyHeading: "Company",
+    linksHeading: "Quick links",
+    legalHeading: "Legal",
+    contactHeading: "Contact",
+    copyright: (year: number, legalName: string) =>
+      `© ${year} ${legalName}. All rights reserved.`,
+    disclaimer:
+      "Prices and availability are subject to confirmation at quotation. Product images are representative; specifications may vary by batch.",
+    socialHeading: "Follow us",
+    social: [
+      {
+        id: "linkedin",
+        label: "Advaita Hygiene Solutions on LinkedIn",
+        href: "https://www.linkedin.com/",
+      },
+      {
+        id: "facebook",
+        label: "Advaita Hygiene Solutions on Facebook",
+        href: "https://www.facebook.com/",
+      },
+      {
+        id: "instagram",
+        label: "Advaita Hygiene Solutions on Instagram",
+        href: "https://www.instagram.com/",
+      },
+      {
+        id: "youtube",
+        label: "Advaita Hygiene Solutions on YouTube",
+        href: "https://www.youtube.com/",
+      },
+    ],
   },
   header: {
     location: "92-A, ITI HBCS Layout, Chandra Layout Extension II Stage, Chandra Layout, Bengaluru, Karnataka 560039",
+    mapsUrl: "https://maps.app.goo.gl/8XNsiZeSFUDSFAfe9",
+    getDirections: "Get directions",
     phone: "+919036056006",
     phoneDisplay: "+91 90360 56006",
-    mail: "advaitahygienesolutions@gmail.com",
+    mail: "sales@advaitahygiene.com",
     responseTimeLabel: "Response time",
     searchPlaceholder: "Search products…",
     searchAria: "Search products",
@@ -44,7 +121,7 @@ export const strings = {
   },
   why: {
     eyebrow: "Why Choose AHS",
-    title: "Why 500+ Buyers Choose AHS",
+    title: "The Wholesale Partner You Can Count On",
   },
   industries: {
     eyebrow: "Sectors We Serve",
@@ -79,6 +156,12 @@ export const strings = {
     callbackTitle: "Request Callback",
   },
   forms: {
+    consentLabel: "I agree that",
+    consentLabelAfterCompany:
+      "may contact me by phone, WhatsApp, or email about my business enquiry, and I have read the",
+    consentPrivacyLink: "Privacy Policy",
+    consentTermsLink: "Terms of Service",
+    consentRequired: "Please confirm you agree to be contacted and have read our Privacy Policy.",
     quoteSuccess:
       "Quote request submitted successfully! We'll get back to you soon.",
     callbackSuccess:

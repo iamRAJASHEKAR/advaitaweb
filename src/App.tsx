@@ -8,16 +8,22 @@ import { Header } from "./components/Header/Header";
 import { HeroSlider } from "./components/HeroSlider/HeroSlider";
 import { CategoryGridSection } from "./components/CategoryGridSection/CategoryGridSection";
 import { CategoryPage } from "./components/CategoryPage/CategoryPage";
-import { WhyChooseSection } from "./components/WhyChooseSection/WhyChooseSection";
 import { IndustriesSection } from "./components/IndustriesSection/IndustriesSection";
-import { ProcessSection } from "./components/ProcessSection/ProcessSection";
-import { ClosingCtaSection } from "./components/ClosingCtaSection/ClosingCtaSection";
-import { TrustSection } from "./components/TrustSection/TrustSection";
 import { ProductDetailPage } from "./components/ProductDetailPage/ProductDetailPage";
 import { ComingSoonPage } from "./components/ComingSoonPage/ComingSoonPage";
 import { PrivacyPolicyPage } from "./components/PrivacyPolicyPage/PrivacyPolicyPage";
+import { AboutUsPage } from "./components/AboutUsPage/AboutUsPage";
+import { ContactPage } from "./components/ContactPage/ContactPage";
+import { TermsOfServicePage } from "./components/TermsOfServicePage/TermsOfServicePage";
+import { Footer } from "./components/Footer/Footer";
+import { ProcessSection } from "./components/ProcessSection/ProcessSection";
+import { WhyChooseSection } from "./components/WhyChooseSection/WhyChooseSection";
+import { TrustSection } from "./components/TrustSection/TrustSection";
 import { Modal } from "./components/Modal/Modal";
 import { QuoteForm } from "./components/Forms/QuoteForm";
+import { paths } from "./routes/paths";
+import { usePageSeo } from "./seo/usePageSeo";
+import { siteMeta } from "./seo/siteMeta";
 
 type ProductPageProps = {
   onGetQuote: () => void;
@@ -67,7 +73,37 @@ function App() {
   const location = useLocation();
   const isProductPage = location.pathname.startsWith("/product/");
   const isComingSoonPage = location.pathname === "/coming-soon";
-  const isPrivacyPolicyPage = location.pathname === "/privacypolicy" || location.pathname === "/privacy-policy";
+  const isHomePage = location.pathname === "/";
+  const [showScrollTop, setShowScrollTop] = useState(false);
+
+  usePageSeo(
+    isHomePage
+      ? { title: siteMeta.title, description: siteMeta.description, path: "/" }
+      : { path: location.pathname },
+  );
+
+  const scrollToTop = () => window.scrollTo(0, 0);
+
+  useEffect(() => {
+    const onScroll = () => {
+      // Show only after user has meaningfully scrolled down.
+      setShowScrollTop(window.scrollY > 600);
+    };
+
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  useEffect(() => {
+    // Hide on route change so it doesn't flash after navigation.
+    setShowScrollTop(false);
+  }, [location.pathname]);
+
+  const goTo = (path: string) => {
+    navigate(path);
+    scrollToTop();
+  };
 
   const handleProductClick = (productId: string) => {
     navigate(`/product/${productId}`);
@@ -89,12 +125,8 @@ function App() {
     <div className={`page${isProductPage ? " page--product-detail" : ""}`}>
       {!isComingSoonPage && (
         <Header
-          onHome={() => navigate("/")}
-          onCatalog={handleSeeAllProducts}
-          onPrivacyPolicy={() => {
-            navigate("/privacypolicy");
-            window.scrollTo(0, 0);
-          }}
+          onHome={() => goTo("/")}
+          onContactUs={() => goTo("/contact")}
           onNavToSection={handleNavToSection}
           products={catalogData.products}
           onSelectProduct={handleProductClick}
@@ -119,10 +151,9 @@ function App() {
                     window.scrollTo(0, 0);
                   }}
                 />
-                <TrustSection metrics={catalogData.trustMetrics} />
                 <WhyChooseSection differentiators={catalogData.differentiators} />
+                <TrustSection metrics={catalogData.trustMetrics} />
                 <ProcessSection steps={catalogData.processSteps} />
-                <ClosingCtaSection onPrimaryCta={() => setShowQuoteModal(true)} />
               </>
             }
           />
@@ -144,11 +175,30 @@ function App() {
               />
             }
           />
-          <Route path="/privacypolicy" element={<PrivacyPolicyPage />} />
-          <Route path="/privacy-policy" element={<Navigate to="/privacypolicy" replace />} />
+          <Route path="/about" element={<AboutUsPage />} />
+          <Route path="/contact" element={<ContactPage onGetQuote={() => setShowQuoteModal(true)} />} />
+          <Route path={paths.privacyPolicy} element={<PrivacyPolicyPage />} />
+          <Route path="/privacypolicy" element={<Navigate to={paths.privacyPolicy} replace />} />
+          <Route path={paths.termsAndConditions} element={<TermsOfServicePage />} />
+          <Route path="/terms" element={<Navigate to={paths.termsAndConditions} replace />} />
           <Route path="/coming-soon" element={<ComingSoonPage />} />
         </Routes>
       </main>
+
+      {!isComingSoonPage && (
+        <Footer
+          onHome={() => goTo("/")}
+          onCatalog={handleSeeAllProducts}
+          onProducts={() => {
+            if (location.pathname === "/") {
+              handleNavToSection("solutions");
+            } else {
+              goTo("/");
+              setTimeout(() => handleNavToSection("solutions"), 150);
+            }
+          }}
+        />
+      )}
 
       {showQuoteModal && (
         <Modal
@@ -160,7 +210,7 @@ function App() {
         </Modal>
       )}
 
-      {!isComingSoonPage && !isPrivacyPolicyPage && (
+      {!isComingSoonPage && (
         <>
           <a
             href={`https://wa.me/${strings.header.phone.replace(/\D/g, "")}`}
@@ -173,6 +223,21 @@ function App() {
               <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
             </svg>
           </a>
+
+          {showScrollTop && (
+            <button
+              type="button"
+              className="scroll-top-fab"
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              aria-label="Scroll to top"
+              title="Scroll to top"
+            >
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
+                <path d="m5 15 7-7 7 7" />
+              </svg>
+              <span className="scroll-top-fab__label">Top</span>
+            </button>
+          )}
         </>
       )}
     </div>

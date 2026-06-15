@@ -1,26 +1,15 @@
 .section--closing {
   background: var(--color-primary);
   color: var(--color-text-inverse);
-  text-align: left;
+  text-align: center;
   padding: 48px max(24px, calc((100vw - 1400px) / 2));
   border-radius: 0;
-  margin: 0 0;
+  margin: 0;
 }
 
-.closing-contact {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(320px, 420px);
-  align-items: center;
-  gap: 32px;
-}
-
-.closing-contact__eyebrow {
-  margin: 0 0 8px;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  opacity: 0.8;
+.closing-cta-block {
+  max-width: 760px;
+  margin: 0 auto;
 }
 
 .section--closing h2 {
@@ -31,7 +20,7 @@
 }
 
 .closing-subtext {
-  margin: 0 0 32px;
+  margin: 0 auto 32px;
   font-size: 17.6px;
   color: var(--color-text-inverse);
   opacity: 0.9;
@@ -41,7 +30,7 @@
 .closing-cta {
   display: flex;
   gap: 16px;
-  justify-content: flex-start;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
@@ -61,102 +50,16 @@
   color: var(--color-text-inverse);
 }
 
-.closing-contact__details {
-  display: grid;
-  gap: 18px;
-  margin: 0;
-  padding: 24px;
-  background: rgba(255, 255, 255, 0.09);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  border-radius: 8px;
-  font-style: normal;
-}
-
-.closing-contact__item {
-  display: grid;
-  grid-template-columns: 42px 1fr;
-  align-items: center;
-  gap: 14px;
-  min-width: 0;
-}
-
-.closing-contact__item--phone {
-  padding: 16px;
-  margin: 2px 0 0;
-  background: rgba(255, 255, 255, 0.14);
-  border: 1px solid rgba(255, 255, 255, 0.26);
-  border-radius: 8px;
-}
-
-.closing-contact__icon {
-  width: 42px;
-  height: 42px;
-  padding: 9px;
-  color: var(--color-text-inverse);
-  background: rgba(255, 255, 255, 0.12);
-  border-radius: 8px;
-}
-
-.closing-contact__label,
-.closing-contact__value {
-  display: block;
-}
-
-.closing-contact__label {
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  opacity: 0.75;
-}
-
-.closing-contact__value {
-  margin-top: 2px;
-  color: var(--color-text-inverse);
-  font-size: 16px;
-  font-weight: 700;
-  text-decoration: none;
-}
-
-.closing-contact__value--phone {
-  display: inline-flex;
-  width: fit-content;
-  margin-top: 5px;
-  padding: 8px 12px;
-  background: var(--color-text-inverse);
-  color: var(--color-primary);
-  border-radius: 8px;
-  font-size: 20px;
-  letter-spacing: 0;
-}
-
-.closing-contact__value--phone:hover {
-  color: var(--color-cta);
-}
-
 @media (max-width: 900px) {
-  .section--closing {
-    text-align: center;
-  }
-
-  .closing-contact {
-    grid-template-columns: 1fr;
-    gap: 28px;
-  }
-
   .closing-cta {
     flex-direction: column;
-    justify-content: center;
+    align-items: stretch;
   }
 
   .btn--primary,
   .btn--outline,
   .btn--whatsapp {
     width: 100%;
-  }
-
-  .closing-contact__details {
-    text-align: left;
   }
 }
 
@@ -173,34 +76,5 @@
   .closing-subtext {
     font-size: 15.2px;
     margin-bottom: 24px;
-  }
-
-  .closing-contact__details {
-    padding: 18px;
-    gap: 16px;
-  }
-
-  .closing-contact__item {
-    grid-template-columns: 36px 1fr;
-    gap: 12px;
-  }
-
-  .closing-contact__icon {
-    width: 36px;
-    height: 36px;
-    padding: 8px;
-  }
-
-  .closing-contact__value {
-    font-size: 14.4px;
-    overflow-wrap: anywhere;
-  }
-
-  .closing-contact__item--phone {
-    padding: 14px;
-  }
-
-  .closing-contact__value--phone {
-    font-size: 18px;
   }
 }

@@ -3,9 +3,11 @@ import { strings } from "../../comms/strings";
 import type { Product } from "../../comms/types";
 import { submitProjectInterest } from "../../lib/supabaseClient";
 import "./LeadCapture.css";
+import { LegalIdentityNotice } from "../LegalIdentityNotice/LegalIdentityNotice";
+import { FormLeadConsent } from "../FormLeadConsent/FormLeadConsent";
 
 type LeadCaptureFormProps = {
-  variant?: "section" | "mini";
+  variant?: "section" | "mini" | "homepage";
   product?: Product;
 };
 
@@ -22,6 +24,7 @@ const buildWhatsAppUrl = (message: string) => {
 };
 
 export function LeadCaptureForm({ variant = "section", product }: LeadCaptureFormProps) {
+  const isHomepage = variant === "homepage";
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState("");
@@ -59,6 +62,7 @@ export function LeadCaptureForm({ variant = "section", product }: LeadCaptureFor
     const company = String(formData.get("company") || "").trim();
     const city = String(formData.get("city") || "").trim();
     const requirement = String(formData.get("requirement") || "").trim();
+    const consent = formData.get("consent");
 
     if (spamField) {
       setError("Unable to submit this request.");
@@ -67,6 +71,11 @@ export function LeadCaptureForm({ variant = "section", product }: LeadCaptureFor
 
     if (!phoneRegex.test(normalizedPhone)) {
       setError("Enter a valid 10-digit mobile number.");
+      return;
+    }
+
+    if (!consent) {
+      setError(strings.forms.consentRequired);
       return;
     }
 
@@ -102,17 +111,23 @@ export function LeadCaptureForm({ variant = "section", product }: LeadCaptureFor
 
   return (
     <div className={`lead-card lead-card--${variant}`}>
-      <div className="lead-card__header">
-        <p className="eyebrow">Talk to Sales</p>
-        <h2>{title}</h2>
-        <p>{subtitle}</p>
-      </div>
-
-      <div className="lead-trust" aria-label="Business trust signals">
-        {trustSignals.map((signal) => (
-          <span key={signal}>{signal}</span>
-        ))}
-      </div>
+      {!isHomepage ? (
+        <>
+          <div className="lead-card__header">
+            <p className="eyebrow">Talk to Sales</p>
+            <h2>{title}</h2>
+            <p>{subtitle}</p>
+          </div>
+          <div className="lead-trust" aria-label="Business trust signals">
+            {trustSignals.map((signal) => (
+              <span key={signal}>{signal}</span>
+            ))}
+          </div>
+          <LegalIdentityNotice variant="compact" />
+        </>
+      ) : (
+        <p className="lead-card__form-label">Request a quote</p>
+      )}
 
       <form className="lead-form" onSubmit={handleSubmit}>
         <input type="text" name="website" tabIndex={-1} autoComplete="off" className="lead-form__trap" />
@@ -151,6 +166,7 @@ export function LeadCaptureForm({ variant = "section", product }: LeadCaptureFor
             disabled={isSubmitting}
           />
         </label>
+        <FormLeadConsent disabled={isSubmitting} />
         {error ? <p className="lead-form__error">{error}</p> : null}
         {submitted ? <p className="lead-form__success">Request received. WhatsApp is opening with your inquiry.</p> : null}
         <button type="submit" className="btn btn--primary btn--lg lead-form__submit" disabled={isSubmitting}>
@@ -158,30 +174,6 @@ export function LeadCaptureForm({ variant = "section", product }: LeadCaptureFor
         </button>
       </form>
     </div>
-  );
-}
-
-export function HomepageLeadSection() {
-  return (
-    <section className="lead-section shell" id="bulk-pricing">
-      <div className="lead-section__copy">
-        <p className="eyebrow">B2B Hygiene Supply</p>
-        <h2>Need Bulk Pricing?</h2>
-        <p>
-          Source pedal bins, garbage containers, stainless steel bins, housekeeping products, and cleaning equipment
-          for offices, institutions, dealers, and facility teams.
-        </p>
-        <div className="lead-section__actions">
-          <a className="btn btn--outline" href={`tel:${strings.header.phone}`}>
-            Call Now
-          </a>
-          <a className="btn btn--ghost" href={buildWhatsAppUrl("Hi, I need pricing for hygiene products.")} target="_blank" rel="noreferrer">
-            WhatsApp
-          </a>
-        </div>
-      </div>
-      <LeadCaptureForm />
-    </section>
   );
 }
 

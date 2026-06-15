@@ -1,6 +1,8 @@
 @import "./theme/variables.css";
 
 .page {
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
   background: var(--color-bg-main);
   color: var(--color-text-primary);
@@ -20,6 +22,7 @@
 }
 
 main {
+  flex: 1;
   overflow-x: hidden;
   max-width: 100%;
 }
@@ -295,4 +298,55 @@ main {
 .whatsapp-fab svg {
   width: 32px;
   height: 32px;
+}
+
+/* Floating scroll-to-top button */
+.scroll-top-fab {
+  position: fixed;
+  right: 50px;
+  bottom: 130px; /* sits above WhatsApp button */
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: var(--color-cta);
+  border: 1px solid var(--color-cta);
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  z-index: 9999;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease,
+    border-color 0.2s ease;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.35);
+}
+
+.scroll-top-fab:hover {
+  background: var(--color-cta-hover);
+  border-color: var(--color-cta-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.45);
+  color: #fff;
+}
+
+.scroll-top-fab svg {
+  width: 18px;
+  height: 18px;
+}
+
+.scroll-top-fab__label {
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+@media (max-width: 600px) {
+  .scroll-top-fab {
+    right: 18px;
+    bottom: 118px;
+    padding: 10px 12px;
+  }
+
+  .scroll-top-fab__label {
+    display: none;
+  }
 }
