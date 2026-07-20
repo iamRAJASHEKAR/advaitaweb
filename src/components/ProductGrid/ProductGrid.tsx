@@ -60,7 +60,8 @@ export function ProductGrid({
           <div className="product-card__body">
             <p className="product-card__name">{product.name}</p>
             <p className="product-card__price">
-              ₹ {product.price.toLocaleString()} {strings.productCard.priceSuffix}
+              ₹ {product.price.toLocaleString()}{" "}
+              {product.priceUnit ?? strings.productCard.priceSuffix}
             </p>
             <p className="product-card__meta product-card__meta--compact">
               {compactMaterial(product.material)}.{compactStructure(product.structure)}

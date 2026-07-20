@@ -14,6 +14,8 @@ export type Product = {
   name: string;
   categoryId: string;
   price: number;
+  /** Overrides default "/ piece" (e.g. "/ SFT"). */
+  priceUnit?: string;
   images: string[];
   capacity: string;
   sizes?: string[];

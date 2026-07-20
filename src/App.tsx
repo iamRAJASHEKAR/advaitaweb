@@ -47,7 +47,7 @@ function ProductPage({ onGetQuote }: ProductPageProps) {
   }
 
   const relatedProducts = catalogData.products
-    .filter((p) => p.id !== product.id)
+    .filter((p) => p.categoryId === product.categoryId && p.id !== product.id)
     .slice(0, 3);
 
   const handleSelectProduct = (productId: string) => {

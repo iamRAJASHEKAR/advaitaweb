@@ -167,6 +167,33 @@
       ],
       "lead": "Lead time: 5-7 days; custom trolleys on quote",
       "availability": "Bulk and custom orders welcome"
+    },
+    {
+      "id": "feminine-hygiene",
+      "name": "Feminine Hygiene Solutions",
+      "tagline": "Supply of feminine hygiene disposal units, sanitary napkin bins, incinerators, pads, and washroom hygiene solutions.",
+      "items": [
+        "Sanitary napkin vending machines",
+        "Sanitary napkin disposal bins",
+        "Feminine hygiene incinerators",
+        "Organic cotton sanitary pads"
+      ],
+      "lead": "Lead time: 3-5 days for standard orders",
+      "availability": "Wholesale pricing for bulk quantities"
+    },
+    {
+      "id": "pvc-curtains",
+      "name": "PVC Curtains and Entry Solutions",
+      "tagline": "Supply of PVC strip curtains, fly killers, shoe cover dispensers, and entry hygiene solutions.",
+      "items": [
+        "PVC strip curtains (custom sizes)",
+        "Polar / freezer grade PVC curtains",
+        "PVC curtain rolls",
+        "Industrial PVC curtains",
+        "Electric fly killers & shoe cover dispensers"
+      ],
+      "lead": "Lead time: 3-5 days; custom sizes on quote",
+      "availability": "Wholesale and custom orders welcome"
     }
   ],
   "products": [
@@ -822,6 +849,279 @@
         "Soft and durable"
       ],
       "minimumOrder": 1
+    },
+    {
+      "id": "sanitary-napkin-vending-machine",
+      "name": "Sanitary Napkin Vending Machine",
+      "categoryId": "feminine-hygiene",
+      "price": 6500,
+      "capacity": "Manual & Coin: 25 / 50 | Automatic & UPI: 50 / 100",
+      "sizes": [
+        "Manual — 25, 50",
+        "Coin — 25, 50",
+        "Automatic — 50, 100",
+        "UPI — 50, 100"
+      ],
+      "material": "MS powder coated",
+      "color": "White / Purple",
+      "structure": "Manual, Coin, Automatic, UPI based",
+      "usage": "Offices, Schools, Malls, Factories, Institutions",
+      "size": "As per model",
+      "finish": "Matte",
+      "description": "Sanitary napkin vending machine available in Manual, Coin, Automatic, and UPI-based types. MS powder coated body. Ideal for ladies washrooms in commercial and institutional spaces. Approx. price ₹6,500 to ₹12,500 based on type.",
+      "features": [
+        "Types: Manual, Coin, Automatic, UPI based",
+        "Manual & Coin capacity: 25 and 50",
+        "Automatic & UPI capacity: 50 and 100",
+        "MS powder coated body",
+        "Approx. price ₹6,500–₹12,500 based on type",
+        "Lockable refill compartment",
+        "Suitable for high-traffic ladies washrooms"
+      ],
+      "minimumOrder": 2,
+      "imagename": "sanitaryvending"
+    },
+    {
+      "id": "sanitary-napkin-disposal-bin",
+      "name": "Sanitary Napkin Disposal Bin",
+      "categoryId": "feminine-hygiene",
+      "price": 1450,
+      "capacity": "18L, 22L",
+      "material": "ABS / Stainless Steel",
+      "color": "Grey Blue",
+      "structure": "Wall Mount / Floor Standing",
+      "usage": "Ladies washrooms, Offices, Hotels, Malls",
+      "size": "35.5–36 cm (L) × 18 cm (W) × 54–56 cm (H) approx.",
+      "finish": "Matte / Polished",
+      "description": "Hygienic sanitary napkin disposal bin designed for ladies washrooms. Features a discreet design with odor-control lid for safe and sanitary disposal.",
+      "features": [
+        "Odor-control sealed lid",
+        "Discreet compact design",
+        "Easy-empty inner liner",
+        "Wall-mount or floor options",
+        "Suitable for high-traffic washrooms"
+      ],
+      "minimumOrder": 5,
+      "imagename": "femininebincard"
+    },
+    {
+      "id": "feminine-hygiene-incinerator",
+      "name": "Feminine Hygiene Incinerator",
+      "categoryId": "feminine-hygiene",
+      "price": 6200,
+      "capacity": "100 to 1000 pads per day",
+      "material": "MS powder coated",
+      "color": "Blue / Pink",
+      "structure": "Floor standing with duct pipe",
+      "usage": "Ladies washrooms, Offices, Hotels, Institutions, Factories",
+      "size": "As per model",
+      "finish": "Powder coated",
+      "description": "Coil-based sanitary napkin incinerator for safe and hygienic disposal of feminine hygiene waste. MS powder coated body. Comes with a duct pipe for odor and smoke control. Approx. price ₹6,200 to ₹9,500 based on model. Ideal for commercial and institutional ladies washrooms.",
+      "features": [
+        "Burning capacity: 100 to 1000 pads per day",
+        "Coil-based operation for efficient combustion",
+        "MS powder coated body",
+        "Comes with duct pipe for exhaust",
+        "Approx. price ₹6,200–₹9,500 based on model",
+        "Odor and smoke control",
+        "Ash tray for easy cleaning",
+        "Durable, energy-efficient, and low maintenance"
+      ],
+      "minimumOrder": 1,
+      "imagename": "incinerator"
+    },
+    {
+      "id": "sanitary-pads",
+      "name": "Sanitary Pads",
+      "categoryId": "feminine-hygiene",
+      "price": 4.5,
+      "capacity": "S to XXL — multiple sizes",
+      "sizes": [
+        "S — 240×80 mm (Light)",
+        "M — 280×90 mm (Regular)",
+        "L — 320×100 mm (Medium)",
+        "XL — 360×110 mm (Heavy)",
+        "XXL — 420×120 mm (Extra Heavy)"
+      ],
+      "material": "Organic cotton",
+      "color": "White",
+      "structure": "Winged pad",
+      "usage": "Personal use, Vending refill, Institutions",
+      "size": "S, M, L, XL, XXL",
+      "finish": "Soft organic cotton",
+      "description": "Organic cotton sanitary pads available in multiple sizes for the right fit every day. Soft, skin-friendly, and chemical-free. Approx. price ₹4.50 to ₹7.00 based on size. Ideal for retail, institutional supply, and vending machine refill.",
+      "features": [
+        "Available in S, M, L, XL, XXL",
+        "100% organic cotton",
+        "Chemical free & skin friendly",
+        "Environment friendly",
+        "Approx. price ₹4.50–₹7.00 based on size"
+      ],
+      "minimumOrder": 100,
+      "imagename": "sanitarypads"
+    },
+    {
+      "id": "pvc-strip-curtain",
+      "name": "PVC Strip Curtain",
+      "categoryId": "pvc-curtains",
+      "price": 3500,
+      "capacity": "Custom doorway sizes",
+      "material": "Transparent PVC",
+      "color": "Clear / Blue-tint",
+      "structure": "Vertical strip curtain with SS hanging system",
+      "usage": "Warehouses, Restaurants, Factories, Shops, Offices",
+      "size": "Custom sizes & thickness available",
+      "finish": "Transparent",
+      "description": "Durable transparent PVC strip curtain for doorway protection and better hygiene. Provides clear visibility with temperature resistance from -15°C to 50°C. Effective barrier against dust, fumes, and insects. Easy installation with SS hanging system.",
+      "features": [
+        "Clear visibility through transparent strips",
+        "Temperature resistance: -15°C to 50°C",
+        "Dust, fumes & insect control",
+        "Easy installation with SS hanging system",
+        "Washable, reusable & long-lasting",
+        "Custom sizes and thickness available"
+      ],
+      "minimumOrder": 1,
+      "imagename": "pvccurtain"
+    },
+    {
+      "id": "electric-fly-killer",
+      "name": "Electric Fly Killer",
+      "categoryId": "pvc-curtains",
+      "price": 2800,
+      "capacity": "Continuous insect control",
+      "material": "Metal frame + UV tubes",
+      "color": "White",
+      "structure": "Wall / hanging UV insect killer",
+      "usage": "Homes, Restaurants, Factories, Shops, Offices",
+      "size": "As per model",
+      "finish": "Matte",
+      "description": "Powerful electric fly killer with UV attraction technology and high-voltage grid. Chemical-free protection from flies, mosquitoes, and other flying insects. Safe for homes and commercial spaces.",
+      "features": [
+        "High-voltage grid for instant kill",
+        "High-intensity UV attraction technology",
+        "Hygienic & chemical-free — no fumes or smell",
+        "Durable build for continuous use",
+        "Ideal for food and commercial spaces"
+      ],
+      "minimumOrder": 2,
+      "imagename": "pvccurtain"
+    },
+    {
+      "id": "entry-shoe-cover-dispenser",
+      "name": "Shoe Cover Dispenser",
+      "categoryId": "pvc-curtains",
+      "price": 3250,
+      "capacity": "Includes shoe cover pack",
+      "material": "Stainless Steel",
+      "color": "Silver",
+      "structure": "Automatic step-in dispenser",
+      "usage": "Hospitals, Clean Rooms, Laboratories, Pharma, Food Industry",
+      "size": "As per model",
+      "finish": "Polished",
+      "description": "Automatic shoe cover dispenser for hygienic entry. Hands-free step-in operation creates a clean barrier against dirt and contamination. Universal fit for most shoe sizes; includes shoe cover pack.",
+      "features": [
+        "Automatic hands-free dispensing",
+        "Hygienic barrier against dirt & contamination",
+        "Universal fit for most shoe sizes",
+        "Includes shoe cover pack",
+        "Ideal for hospitals, labs & clean rooms"
+      ],
+      "minimumOrder": 1,
+      "imagename": "pvccurtain"
+    },
+    {
+      "id": "polar-freezer-pvc-curtain",
+      "name": "Polar / Freezer Grade PVC Curtain",
+      "categoryId": "pvc-curtains",
+      "price": 130,
+      "priceUnit": "/ SFT",
+      "capacity": "Rated to -32°C",
+      "sizes": [
+        "2 mm",
+        "3 mm"
+      ],
+      "material": "Polar / Freezer grade PVC",
+      "color": "Clear / Blue-tint",
+      "structure": "Vertical strip curtain for cold environments",
+      "usage": "Cold rooms, Freezer units, Cold storage warehouses, Food processing, Refrigerated loading areas, Pharma & chemical units",
+      "size": "Thickness: 2 mm, 3 mm | Custom doorway sizes",
+      "finish": "Transparent / Ribbed",
+      "grade": "Freezer grade",
+      "description": "Polar / freezer grade PVC curtains built for extreme cold and made to perform down to -32°C. Available in 2 mm and 3 mm thickness. Priced at ₹130 / SFT. Ideal for cold rooms, freezer units, cold storage warehouses, food processing, refrigerated loading areas, and pharmaceutical units.",
+      "features": [
+        "Price: ₹130 / SFT",
+        "Thickness available: 2 mm, 3 mm",
+        "Built for extreme cold — rated to -32°C",
+        "Ideal for cold rooms & freezer units",
+        "Suitable for cold storage warehouses",
+        "Food processing & refrigerated loading areas",
+        "Pharmaceutical & chemical unit applications",
+        "Custom sizes available"
+      ],
+      "minimumOrder": 1,
+      "imagename": "polarpvc"
+    },
+    {
+      "id": "pvc-curtain-rolls",
+      "name": "PVC Curtain Rolls",
+      "categoryId": "pvc-curtains",
+      "price": 6750,
+      "capacity": "Multiple sizes & thicknesses",
+      "sizes": [
+        "2 mm",
+        "3 mm"
+      ],
+      "material": "Premium quality PVC",
+      "color": "Clear, Blue, Red, Yellow / Amber",
+      "structure": "Roll form — smooth & ribbed finish",
+      "usage": "Warehouses, Factories, Cold storage, Loading docks, Supermarkets, Retail, Garages, Workshops, Agriculture",
+      "size": "Thickness: 2 mm, 3 mm | Custom lengths available",
+      "finish": "Smooth / Ribbed",
+      "description": "Premium PVC curtain rolls — durable, flexible, and reliable for every industrial need. Available in 2 mm and 3 mm thickness with different colors (clear, blue, red, yellow/amber). Smooth or ribbed finish. Approx. price ₹6,750. Temperature resistant from -15°C to 50°C. Easy to cut and install.",
+      "features": [
+        "Approx. price ₹6,750",
+        "Thickness available: 2 mm, 3 mm",
+        "Different colors available — clear, blue, red, yellow",
+        "High durability — wear, tear & impact resistant",
+        "Temperature resistant: -15°C to 50°C",
+        "Weather & chemical resistant",
+        "Smooth & ribbed finish",
+        "Custom lengths available"
+      ],
+      "minimumOrder": 1,
+      "imagename": "pvcroll"
+    },
+    {
+      "id": "industrial-pvc-curtain",
+      "name": "Industrial PVC Strip Curtain",
+      "categoryId": "pvc-curtains",
+      "price": 120,
+      "priceUnit": "/ SFT",
+      "capacity": "Heavy-duty doorway installation",
+      "sizes": [
+        "2 mm",
+        "3 mm"
+      ],
+      "material": "Industrial grade PVC",
+      "color": "Blue-tint transparent",
+      "structure": "Overlapping vertical strips with heavy-duty metal rail",
+      "usage": "Warehouse entrances, Factories, Cold storage, Clean rooms, Industrial partitions",
+      "size": "Thickness: 2 mm, 3 mm | Custom doorway sizes",
+      "finish": "Transparent blue-tint",
+      "description": "Heavy-duty industrial PVC strip curtain with overlapping transparent blue-tint strips and metal mounting rail. Available in 2 mm and 3 mm thickness. Priced at ₹120 / SFT. Designed for warehouse and factory doorways — provides visibility, thermal insulation, and dust protection with easy passage.",
+      "features": [
+        "Price: ₹120 / SFT",
+        "Thickness available: 2 mm, 3 mm",
+        "Heavy-duty metal mounting rail system",
+        "Overlapping strips for full barrier coverage",
+        "Blue-tint transparent for visibility & safety",
+        "Thermal insulation & dust protection",
+        "Ideal for warehouses, factories & industrial partitions",
+        "Custom doorway sizes available"
+      ],
+      "minimumOrder": 1,
+      "imagename": "industrialpvc"
     }
   ]
 }

@@ -6,12 +6,16 @@ import washingmanageImg from "../../assets/washingmanage.png";
 import wastemanageImg from "../../assets/wastemanage.png";
 import chemicalmanageImg from "../../assets/chemicalmanage.png";
 import outdoormanageImg from "../../assets/outdoormanage.png";
+import femininehygieneImg from "../../assets/feminehygiene.png";
+import pvcCurtainImg from "../../assets/pvccurtain.png";
 
 const categoryImages: Record<string, string> = {
   washroom: washingmanageImg,
   waste: wastemanageImg,
   chemicals: chemicalmanageImg,
   outdoor: outdoormanageImg,
+  "feminine-hygiene": femininehygieneImg,
+  "pvc-curtains": pvcCurtainImg,
 };
 
 export type CategoryGridSectionProps = {

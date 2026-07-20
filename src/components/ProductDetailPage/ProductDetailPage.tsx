@@ -79,7 +79,8 @@ export function ProductDetailPage({
 
             <div className="price-section">
               <span className="price">
-                ₹ {product.price.toLocaleString()} {strings.productCard.priceSuffix}
+                ₹ {product.price.toLocaleString()}{" "}
+                {product.priceUnit ?? strings.productCard.priceSuffix}
               </span>
 
             </div>

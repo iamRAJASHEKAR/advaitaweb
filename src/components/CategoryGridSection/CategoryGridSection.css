@@ -10,11 +10,6 @@
   min-width: 0;
 }
 
-/* Center the single card on the second row (4th item) */
-.category-grid-card:nth-child(4) {
-  grid-column: 2;
-}
-
 .category-grid-card {
   display: flex;
   flex-direction: column;
