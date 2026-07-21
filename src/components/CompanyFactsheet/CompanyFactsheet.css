@@ -1,0 +1,72 @@
+.company-factsheet {
+  margin: 16px 0;
+}
+
+.company-factsheet__title {
+  margin: 0 0 14px;
+  font-size: 20px;
+  color: var(--color-primary);
+}
+
+.company-factsheet__subtitle {
+  margin: 0 0 8px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.company-factsheet__table-wrap {
+  overflow-x: auto;
+  margin-bottom: 18px;
+  border: 1px solid var(--color-border-light);
+  border-radius: 10px;
+  background: #fff;
+}
+
+.company-factsheet__table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.company-factsheet__table th,
+.company-factsheet__table td {
+  padding: 11px 14px;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.company-factsheet__table tr:last-child th,
+.company-factsheet__table tr:last-child td {
+  border-bottom: none;
+}
+
+.company-factsheet__table th {
+  width: 38%;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  background: var(--color-bg-light);
+}
+
+.company-factsheet__table td {
+  color: var(--color-text-primary);
+  font-weight: 500;
+}
+
+.company-factsheet--compact .company-factsheet__title {
+  font-size: 18px;
+}
+
+.company-factsheet--compact .company-factsheet__table th {
+  width: 42%;
+}
+
+.company-factsheet__list {
+  margin: 0;
+  padding-left: 18px;
+  display: grid;
+  gap: 6px;
+}

@@ -116,6 +116,21 @@
     </script>
   </head>
   <body>
+    <script>
+      (function () {
+        var path = location.pathname.replace(/\/$/, "") || "/";
+        if (path !== "/") {
+          var home = document.getElementById("crawlable-home-summary");
+          if (home) home.hidden = true;
+        }
+        var privacy = document.getElementById("crawlable-privacy-page");
+        var terms = document.getElementById("crawlable-terms-page");
+        var about = document.getElementById("crawlable-about-page");
+        if (path === "/privacy-policy" && privacy) privacy.hidden = false;
+        if (path === "/terms-and-conditions" && terms) terms.hidden = false;
+        if (path === "/about" && about) about.hidden = false;
+      })();
+    </script>
     <div id="crawlable-home-summary" class="crawlable-home-summary">
       <h1>Advaita Hygiene Solutions Private Limited</h1>
       <p>Trading as Advaita Hygiene Solutions — wholesale washroom, waste management, and cleaning products in Bengaluru, Karnataka, India.</p>
@@ -130,25 +145,135 @@
         <a href="/contact">Contact Us</a>
       </p>
     </div>
+    <div id="crawlable-privacy-page" class="crawlable-legal-page" hidden>
+      <main>
+        <h1>Privacy Policy — Advaita Hygiene Solutions Private Limited</h1>
+        <p>
+          This page explains how we collect, use, store, and protect business information when you
+          visit advaitahygiene.com, submit an enquiry, contact us by phone, email, or WhatsApp, or
+          interact with our advertising.
+        </p>
+        <h2>Information we collect</h2>
+        <p>
+          Company name, contact details, addresses, GST and billing information, enquiry messages,
+          order references, communication history, and technical data such as IP address and pages
+          visited.
+        </p>
+        <h2>Consent</h2>
+        <p>
+          Website enquiry forms require consent to be contacted and acknowledgement of this Privacy
+          Policy and our Terms of Service before we process your request.
+        </p>
+        <h2>Cookies &amp; tracking</h2>
+        <p>
+          We use essential, analytics, and advertising cookies (including Google Ads tags) to operate
+          the site, measure performance, and understand campaign effectiveness. You may manage cookies
+          in your browser settings.
+        </p>
+        <h2>Data use, sharing &amp; retention</h2>
+        <p>
+          We use data to respond to enquiries, prepare quotations, process orders, provide support,
+          and meet legal obligations. We do not sell customer data. We share limited information with
+          logistics, payment, hosting, and compliance partners when required. Data is retained only as
+          long as needed for business, tax, and legal purposes.
+        </p>
+        <h2>Your rights</h2>
+        <p>
+          You may request access, correction, deletion (where permitted), or withdrawal of marketing
+          consent by emailing sales@advaitahygiene.com.
+        </p>
+        <h2>Grievance &amp; privacy contact</h2>
+        <p>
+          Advaita Hygiene Solutions Private Limited · Email: sales@advaitahygiene.com · Phone:
+          +91 90360 56006 · Address: 92-A, ITI HBCS Layout, Chandra Layout Extension II Stage,
+          Chandra Layout, Bengaluru, Karnataka 560039
+        </p>
+        <p>
+          <a href="/privacy-policy">Full Privacy Policy</a> ·
+          <a href="/terms-and-conditions">Terms and Conditions</a>
+        </p>
+      </main>
+    </div>
+    <div id="crawlable-terms-page" class="crawlable-legal-page" hidden>
+      <main>
+        <h1>Terms and Conditions — Advaita Hygiene Solutions Private Limited</h1>
+        <p>
+          These Terms govern B2B wholesale supply, quotations, orders, payment, delivery, and use of
+          advaitahygiene.com. By requesting a quote or placing an order on behalf of an organization,
+          you agree to these Terms.
+        </p>
+        <h2>Quotations &amp; pricing</h2>
+        <p>
+          Website prices are indicative unless confirmed in a written quotation or tax invoice. Final
+          price, GST, freight, and MOQ are stated at quotation or invoice stage. GST No:
+          29ABECA8426C1ZQ.
+        </p>
+        <h2>Orders &amp; payment</h2>
+        <p>
+          Orders are binding only after our written acceptance and any required advance payment or
+          credit approval. Payment terms are stated on the invoice. We may decline orders due to stock,
+          credit, or regulatory reasons.
+        </p>
+        <h2>Delivery</h2>
+        <p>
+          Delivery timelines are estimates. Risk passes on delivery to the agreed address or carrier
+          handover unless otherwise stated on the invoice.
+        </p>
+        <h2>Cancellation, returns &amp; warranty</h2>
+        <p>
+          Standard orders may be cancelled before dispatch with our approval. Custom or imported orders
+          are generally non-cancellable once procured. Report transit damage within 48 hours. Manufacturing
+          defects are reviewed per invoice warranty terms.
+        </p>
+        <h2>Liability &amp; jurisdiction</h2>
+        <p>
+          Liability is limited to the invoice value of the products giving rise to a claim. Governed by
+          the laws of India. Courts in Bengaluru, Karnataka have exclusive jurisdiction unless otherwise
+          agreed in writing.
+        </p>
+        <h2>Contact</h2>
+        <p>
+          Email: sales@advaitahygiene.com · Phone: +91 90360 56006
+        </p>
+        <p>
+          <a href="/terms-and-conditions">Full Terms and Conditions</a> ·
+          <a href="/privacy-policy">Privacy Policy</a>
+        </p>
+      </main>
+    </div>
+    <div id="crawlable-about-page" class="crawlable-legal-page" hidden>
+      <main>
+        <h1>About Us — Advaita Hygiene Solutions Private Limited</h1>
+        <p>Chandra Layout, Bengaluru, Karnataka · Wholesaler / Distributor</p>
+        <h2>Factsheet — Basic information</h2>
+        <p>Nature of business: Wholesaler / Distributor</p>
+        <p>Company CEO: P Rajashekar Reddy</p>
+        <p>Directors: P Rajashekar Reddy (Director &amp; CEO), K Rajasekhar Reddy (Director)</p>
+        <p>Date of incorporation: 7 February 2026</p>
+        <p>GST registration date: February 2026</p>
+        <p>Legal status: Private Limited Company</p>
+        <h2>Statutory profile</h2>
+        <p>GST No: 29ABECA8426C1ZQ · CIN: U20235KA2026PTC215622</p>
+        <p>Address: 92-A, ITI HBCS Layout, Chandra Layout, Bengaluru 560039</p>
+        <h2>Business model &amp; fulfilment</h2>
+        <p>
+          B2B wholesale quotations, GST invoicing, Bengaluru warehouse pick-pack-dispatch, road transport
+          and buyer pickup. Payment by NEFT/RTGS/UPI. Products: washroom, waste management, cleaning
+          chemicals, and facility supplies.
+        </p>
+        <p>Email sales@advaitahygiene.com · Phone +91 90360 56006</p>
+      </main>
+    </div>
     <noscript>
       <main style="max-width:900px;margin:0 auto;padding:16px;font-family:system-ui,sans-serif;line-height:1.55;color:#1a1a1a;">
         <h1>Advaita Hygiene Solutions Private Limited</h1>
-        <p><strong>GST No:</strong> 29ABECA8426C1ZQ<br /><strong>CIN:</strong> U20235KA2026PTC215622</p>
-        <p>Wholesale distributor of washroom hygiene, waste management, cleaning chemicals, and facility supplies for retailers, distributors, corporate offices, hospitals, and institutions in Bengaluru and across India.</p>
-        <h2>Service area</h2>
-        <p>Bengaluru and Karnataka (primary); wholesale dispatch across India on confirmed orders.</p>
-        <h2>Contact</h2>
-        <p>
-          92-A, ITI HBCS Layout, Chandra Layout Extension II Stage, Chandra Layout, Bengaluru, Karnataka 560039<br />
-          Phone: <a href="tel:+919036056006">+91 90360 56006</a><br />
-          Email: <a href="mailto:sales@advaitahygiene.com">sales@advaitahygiene.com</a>
-        </p>
-        <p>
-          <a href="/privacy-policy">Privacy Policy</a> |
-          <a href="/terms-and-conditions">Terms and Conditions</a> |
-          <a href="/about">About Us</a> |
-          <a href="/contact">Contact</a>
-        </p>
+        <p>Enable JavaScript to use this website, or visit these pages directly:</p>
+        <ul>
+          <li><a href="/about">About Us</a> — incorporation, directors, business model, warehouse fulfilment</li>
+          <li><a href="/privacy-policy">Privacy Policy</a></li>
+          <li><a href="/terms-and-conditions">Terms and Conditions</a></li>
+          <li><a href="/contact">Reach us</a></li>
+        </ul>
       </main>
     </noscript>
     <div id="root"></div>

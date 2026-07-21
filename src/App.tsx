@@ -22,8 +22,8 @@ import { TrustSection } from "./components/TrustSection/TrustSection";
 import { Modal } from "./components/Modal/Modal";
 import { QuoteForm } from "./components/Forms/QuoteForm";
 import { paths } from "./routes/paths";
+import { getRouteSeo } from "./seo/pageSeo";
 import { usePageSeo } from "./seo/usePageSeo";
-import { siteMeta } from "./seo/siteMeta";
 
 type ProductPageProps = {
   onGetQuote: () => void;
@@ -73,14 +73,10 @@ function App() {
   const location = useLocation();
   const isProductPage = location.pathname.startsWith("/product/");
   const isComingSoonPage = location.pathname === "/coming-soon";
-  const isHomePage = location.pathname === "/";
   const [showScrollTop, setShowScrollTop] = useState(false);
+  const pageSeo = getRouteSeo(location.pathname);
 
-  usePageSeo(
-    isHomePage
-      ? { title: siteMeta.title, description: siteMeta.description, path: "/" }
-      : { path: location.pathname },
-  );
+  usePageSeo(pageSeo);
 
   const scrollToTop = () => window.scrollTo(0, 0);
 

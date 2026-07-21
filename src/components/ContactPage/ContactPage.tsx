@@ -1,6 +1,9 @@
 import "../PrivacyPolicyPage/PrivacyPolicyPage.css";
 import "./ContactPage.css";
+import { Link } from "react-router-dom";
 import { strings } from "../../comms/strings";
+import { paths } from "../../routes/paths";
+import { CompanyFactsheet } from "../CompanyFactsheet/CompanyFactsheet";
 import { GetDirectionsLink } from "../GetDirectionsLink/GetDirectionsLink";
 
 type ContactPageProps = {
@@ -30,14 +33,19 @@ export function ContactPage({ onGetQuote }: ContactPageProps) {
 
         <div className="privacy-policy__content">
           <section className="privacy-policy__section">
+            <CompanyFactsheet variant="compact" />
+            <p>
+              <Link to={paths.about}>View full company profile</Link>
+            </p>
+          </section>
+
+          <section className="privacy-policy__section">
             <h2>Business contact</h2>
             <div className="privacy-policy__contact">
               <p>
                 <strong>{strings.company.legalName}</strong>
                 <br />
-                {strings.company.gstLabel} {strings.company.gstNumber}
-                <br />
-                {strings.company.cinLabel} {strings.company.cinNumber}
+                CEO: {strings.companyProfile.companyCeo}
               </p>
               <p>
                 <strong>Address</strong>
