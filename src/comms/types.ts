@@ -30,6 +30,9 @@ export type Product = {
   features: string[];
   minimumOrder?: number;
   imagename?: AssetName;
+  /** Optional compact image for category left-menu list. */
+  thumbname?: AssetName;
+  thumb?: string;
 };
 
 export type TrustMetric = {

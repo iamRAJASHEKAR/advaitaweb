@@ -1,0 +1,135 @@
+.product-mobile-card {
+  background: var(--color-bg-main);
+  border: 1px solid var(--color-border-light);
+  border-radius: 14px;
+  padding: 14px;
+  box-shadow: 0 2px 8px rgba(10, 37, 64, 0.06);
+  cursor: pointer;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.product-mobile-card:focus-visible {
+  outline: 2px solid var(--color-cta);
+  outline-offset: 2px;
+}
+
+.product-mobile-card:active {
+  border-color: var(--color-cta);
+}
+
+.product-mobile-card__header {
+  margin-bottom: 12px;
+}
+
+.product-mobile-card__title {
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.35;
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.product-mobile-card__price {
+  margin: 4px 0 0;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-cta);
+}
+
+.product-mobile-card__body {
+  display: grid;
+  grid-template-columns: 96px minmax(0, 1fr);
+  gap: 12px;
+  align-items: start;
+}
+
+.product-mobile-card__image {
+  width: 96px;
+  height: 96px;
+  border-radius: 10px;
+  border: 1px solid var(--color-border-light);
+  background: var(--color-bg-light);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-mobile-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  padding: 4px;
+}
+
+.product-mobile-card__specs {
+  margin: 0;
+  min-width: 0;
+}
+
+.product-mobile-card__spec-row {
+  display: flex;
+  gap: 4px;
+  font-size: 13px;
+  line-height: 1.45;
+  margin-bottom: 4px;
+}
+
+.product-mobile-card__spec-row dt {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-weight: 500;
+  flex-shrink: 0;
+}
+
+.product-mobile-card__spec-row dd {
+  margin: 0;
+  color: var(--color-text-primary);
+  font-weight: 600;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.product-mobile-card__more {
+  margin: 8px 0 12px;
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--color-cta);
+  font-size: 13px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  text-align: left;
+}
+
+.product-mobile-card__more:hover {
+  text-decoration: underline;
+}
+
+.product-mobile-card__actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.product-mobile-card__action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 10px 12px;
+  font-size: 14px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.product-mobile-card__action svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}

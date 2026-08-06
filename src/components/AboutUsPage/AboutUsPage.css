@@ -1,0 +1,121 @@
+.about-page .company-factsheet {
+  padding-bottom: 8px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.about-page__hero {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.about-page__location {
+  margin: 0 0 10px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+
+.about-page__product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px;
+}
+
+.about-page__product-card {
+  padding: 14px 16px;
+  background: #fff;
+  border: 1px solid var(--color-border-light);
+  border-radius: 10px;
+}
+
+.about-page__product-card h3 {
+  margin: 0 0 6px;
+  font-size: 15px;
+  color: var(--color-primary);
+}
+
+.about-page__product-card p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--color-text-secondary);
+}
+
+.about-page__commerce {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.about-page__commerce h2 {
+  margin-top: 0;
+}
+
+.about-page__directors {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 12px;
+}
+
+.about-page__directors li {
+  padding: 12px 14px;
+  background: #fff;
+  border: 1px solid var(--color-border-light);
+  border-radius: 10px;
+  display: grid;
+  gap: 4px;
+}
+
+.about-page__directors strong {
+  color: var(--color-primary);
+  font-size: 16px;
+}
+
+.about-page__directors span {
+  color: var(--color-text-secondary);
+  font-size: 14px;
+}
+
+.about-page__fulfillment {
+  margin: 0;
+  padding-left: 20px;
+  display: grid;
+  gap: 14px;
+}
+
+.about-page__fulfillment li {
+  color: var(--color-text-secondary);
+}
+
+.about-page__fulfillment strong {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--color-primary);
+}
+
+.about-page__fulfillment p {
+  margin: 0;
+}
+
+.about-page__sectors {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 8px;
+}
+
+.about-page__sectors li {
+  padding: 10px 12px;
+  background: #fff;
+  border: 1px solid var(--color-border-light);
+  border-radius: 8px;
+  color: var(--color-text-primary);
+  font-weight: 600;
+  font-size: 14px;
+}

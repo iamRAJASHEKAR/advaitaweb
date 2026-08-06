@@ -35,6 +35,18 @@
   margin-top: 16px;
 }
 
+.contact-page__actions--secondary {
+  margin-top: 20px;
+}
+
+.contact-page__form-section {
+  padding-bottom: 8px;
+}
+
+.contact-page__form-section .form {
+  margin-top: 16px;
+}
+
 .contact-page__actions .btn {
   display: flex;
   align-items: center;

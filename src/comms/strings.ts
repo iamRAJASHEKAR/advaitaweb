@@ -13,6 +13,96 @@ export const strings = {
     cinLabel: "CIN:",
     serviceArea:
       "Bengaluru and Karnataka (primary); wholesale dispatch to retailers, distributors, and institutions across India on confirmed orders.",
+    incorporationDate: "7 February 2026",
+    gstRegistrationDate: "February 2026",
+    roc: "Registrar of Companies, Bangalore (Karnataka)",
+    yearEstablished: "2026",
+  },
+  companyProfile: {
+    factsheetHeading: "Factsheet",
+    basicInfoHeading: "Basic information",
+    statutoryHeading: "Statutory profile",
+    natureOfBusiness: "Wholesaler / Distributor",
+    additionalBusiness: ["Wholesale Business", "B2B Institutional Supply"],
+    legalStatus: "Private Limited Company",
+    companyCeo: "P Rajashekar Reddy",
+    gstPartnerName: "P Rajashekar Reddy",
+    aboutCompanyHeading: "About the company",
+    aboutCompanyBody:
+      "Advaita Hygiene Solutions Private Limited supplies commercial washroom hygiene, cleaning chemicals, waste management bins, dispensers, and facility consumables to trade buyers. From our Bengaluru office and warehouse, we support retailers, distributors, corporate offices, hospitals, hotels, educational campuses, and institutions with bulk quotations, GST-compliant invoicing, and reliable dispatch.",
+    infrastructureHeading: "Infrastructure & warehouse",
+    infrastructureBody:
+      "We operate a wholesale dispatch facility at our registered Bengaluru address in Chandra Layout. Stocked fast-moving SKUs and procured items are received, stored, picked, packed, and handed to road transport or buyer-nominated carriers. Order status and invoice references are shared at confirmation and dispatch.",
+    paymentHeading: "Payment mode",
+    paymentModes: [
+      "NEFT / RTGS / IMPS bank transfer",
+      "UPI (on approved orders)",
+      "Advance payment or credit terms as agreed on quotation",
+    ],
+    shipmentHeading: "Shipment mode",
+    shipmentModes: [
+      "Road transport across Karnataka and pan-India",
+      "Buyer pickup from Bengaluru warehouse",
+      "Third-party courier / logistics partners on request",
+    ],
+    managementHeading: "Key management & directors",
+    proofHeading: "Proof of operation",
+  },
+  aboutPage: {
+    eyebrow: "About us",
+    title: "Who we are",
+    intro:
+      "Advaita Hygiene Solutions Private Limited is a Bengaluru-based wholesaler and distributor focused on washroom hygiene, cleaning chemicals, waste management, and facility supplies for business customers across Karnataka and India.",
+    historyHeading: "Company background",
+    historyBody:
+      "The company was incorporated on 7 February 2026 under the Companies Act, 2013 and is registered with the Registrar of Companies, Bangalore. We operate from our Bengaluru office and warehouse, supplying trade buyers who need reliable bulk availability, GST-compliant billing, and coordinated dispatch.",
+    leadershipHeading: "Leadership & directors",
+    directors: [
+      { name: "P Rajashekar Reddy", role: "Director & Chief Executive Officer (CEO)" },
+      { name: "K Rajasekhar Reddy", role: "Director" },
+    ],
+    modelHeading: "Business model",
+    modelBody:
+      "We operate a B2B wholesale and distribution model. Customers submit product requirements; we confirm availability, share written quotations with GST and freight, and fulfil confirmed purchase orders from stocked and procured inventory. We do not operate as a retail store for individual consumers.",
+    modelPoints: [
+      "Bulk quotations for retailers, distributors, corporates, and institutions",
+      "GST invoicing with registered GSTIN 29ABECA8426C1ZQ",
+      "Minimum order quantities and trade pricing confirmed at quotation stage",
+      "Repeat supply and refill planning for ongoing facility programmes",
+    ],
+    productsHeading: "Products we supply",
+    sectorsHeading: "Who we serve",
+    sectorsBody:
+      "Our wholesale supply programmes support facility teams, procurement managers, and trade buyers in:",
+    fulfillmentHeading: "Warehouse & order fulfilment",
+    fulfillmentIntro:
+      "Orders move through a defined wholesale workflow so buyers receive clear pricing, dispatch timelines, and documentation.",
+    fulfillmentSteps: [
+      {
+        title: "Enquiry & quotation",
+        body: "Share product list, quantities, delivery location, and timeline. We respond with availability, trade pricing, MOQ, and estimated dispatch.",
+      },
+      {
+        title: "Order confirmation",
+        body: "On purchase order acceptance and any agreed advance payment, we allocate stock and prepare pick-list and invoice documentation.",
+      },
+      {
+        title: "Pick, pack & dispatch",
+        body: "Goods are picked from our Bengaluru warehouse, packed for transport, and handed to our logistics partner or your nominated carrier.",
+      },
+      {
+        title: "Delivery & after-sales",
+        body: "Delivery is coordinated to your site or carrier collection point. Shortages or transit damage are logged against invoice reference for resolution.",
+      },
+    ],
+    operationsHeading: "Proof of operation",
+    operationsPoints: [
+      "Active private limited company (CIN U20235KA2026PTC215622)",
+      "Registered GST supplier (29ABECA8426C1ZQ)",
+      "Operating office and warehouse address in Chandra Layout, Bengaluru",
+      "Published Privacy Policy, Terms and Conditions, and business contact channels",
+    ],
+    registeredHeading: "Registered company details",
   },
   businessOverview: {
     eyebrow: "About our business",
@@ -43,6 +133,9 @@ export const strings = {
       "We respond to all enquiries during our working hours and strive to provide timely support for your requirements.",
     tagline:
       "Partner with Advaita Hygiene Solutions – Delivering Quality Hygiene Products Across Industries.",
+    formHeading: "Contact us",
+    formBody:
+      "Share your details and requirements. We will respond with product availability and wholesale pricing.",
   },
   nav: {
     products: "Products",
@@ -141,6 +234,33 @@ export const strings = {
   trust: {
     label: "Trust Indicators",
   },
+  categoryPage: {
+    viewMore: "View more...",
+    getBestPrice: "Get Best Price",
+    callNow: "Call Now",
+    closeDetails: "Close product details",
+  },
+  bottomNav: {
+    ariaLabel: "Mobile navigation",
+    home: "Home",
+    profile: "Profile",
+    products: "Products",
+    contact: "Contact us",
+    call: "Call us",
+    aboutMenuTitle: "About",
+    closeMenu: "Close menu",
+    cancel: "Cancel",
+  },
+  productsPage: {
+    eyebrow: "Wholesale catalogue · Bengaluru",
+    title: "Wholesale Hygiene Products for Business Buyers",
+    body:
+      "Browse Advaita Hygiene Solutions’ B2B catalogue of washroom supplies, waste management bins, cleaning chemicals, outdoor systems, feminine hygiene products, PVC curtains, and bio-medical waste solutions. Wholesale pricing and dispatch from Bengaluru across Karnataka and India.",
+    metaDescription:
+      "Wholesale hygiene products catalogue from Advaita Hygiene Solutions, Bengaluru: washroom supplies, waste bins, cleaning chemicals, outdoor systems, feminine hygiene, PVC curtains, and bio-medical waste solutions for B2B buyers.",
+    viewAll: "View all →",
+    viewAllLabel: "View all products in",
+  },
   productCard: {
     priceSuffix: "/ piece",
     detailsCta: "Call now",
@@ -174,6 +294,20 @@ export const strings = {
       submit: "Get Quote",
       ok: "OK",
       successTitle: "Quote request received",
+    },
+    contact: {
+      name: "Full name *",
+      phone: "Phone number *",
+      email: "Email (optional)",
+      message: "How can we help?",
+      submit: "Send message",
+      submitting: "Sending...",
+      ok: "Send another message",
+      successTitle: "Message sent",
+      success:
+        "Thanks for contacting us. Our team will get back to you shortly.",
+      phoneInvalid: "Enter a valid 10-digit mobile number.",
+      submitError: "Unable to send your message. Please try again or call us.",
     },
     callback: {
       name: "Name *",
@@ -240,6 +374,7 @@ export const strings = {
       size: "Size",
       grade: "Grade",
       finish: "Finish",
+      minOrder: "Minimum order",
     },
   },
 };

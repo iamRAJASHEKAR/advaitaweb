@@ -8,6 +8,7 @@ import { Header } from "./components/Header/Header";
 import { HeroSlider } from "./components/HeroSlider/HeroSlider";
 import { CategoryGridSection } from "./components/CategoryGridSection/CategoryGridSection";
 import { CategoryPage } from "./components/CategoryPage/CategoryPage";
+import { ProductsPage } from "./components/ProductsPage/ProductsPage";
 import { IndustriesSection } from "./components/IndustriesSection/IndustriesSection";
 import { ProductDetailPage } from "./components/ProductDetailPage/ProductDetailPage";
 import { ComingSoonPage } from "./components/ComingSoonPage/ComingSoonPage";
@@ -16,21 +17,24 @@ import { AboutUsPage } from "./components/AboutUsPage/AboutUsPage";
 import { ContactPage } from "./components/ContactPage/ContactPage";
 import { TermsOfServicePage } from "./components/TermsOfServicePage/TermsOfServicePage";
 import { Footer } from "./components/Footer/Footer";
+import { BottomNav } from "./components/BottomNav/BottomNav";
 import { ProcessSection } from "./components/ProcessSection/ProcessSection";
 import { WhyChooseSection } from "./components/WhyChooseSection/WhyChooseSection";
 import { TrustSection } from "./components/TrustSection/TrustSection";
 import { Modal } from "./components/Modal/Modal";
 import { QuoteForm } from "./components/Forms/QuoteForm";
-import { paths } from "./routes/paths";
+import { paths, categoryUrl, categoryProductUrl } from "./routes/paths";
+import { getRouteSeo } from "./seo/pageSeo";
 import { usePageSeo } from "./seo/usePageSeo";
-import { siteMeta } from "./seo/siteMeta";
 
 type ProductPageProps = {
   onGetQuote: () => void;
+  productId?: string;
 };
 
-function ProductPage({ onGetQuote }: ProductPageProps) {
-  const { id } = useParams<{ id: string }>();
+function ProductPage({ onGetQuote, productId: fixedProductId }: ProductPageProps) {
+  const { id: paramId } = useParams<{ id: string }>();
+  const id = fixedProductId ?? paramId;
   const navigate = useNavigate();
   const product = id
     ? catalogData.products.find((p) => p.id === id) ?? null
@@ -51,7 +55,7 @@ function ProductPage({ onGetQuote }: ProductPageProps) {
     .slice(0, 3);
 
   const handleSelectProduct = (productId: string) => {
-    navigate(`/product/${productId}`, { replace: true });
+    navigate(categoryProductUrl(product.categoryId, productId), { replace: true });
     window.scrollTo(0, 0);
   };
 
@@ -59,7 +63,10 @@ function ProductPage({ onGetQuote }: ProductPageProps) {
     <ProductDetailPage
       key={product.id}
       product={product}
-      onBack={() => navigate("/")}
+      onBack={() => {
+        navigate(categoryUrl(product.categoryId));
+        window.scrollTo(0, 0);
+      }}
       onGetQuote={onGetQuote}
       onSelectProduct={handleSelectProduct}
       relatedProducts={relatedProducts}
@@ -71,16 +78,14 @@ function App() {
   const [showQuoteModal, setShowQuoteModal] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
-  const isProductPage = location.pathname.startsWith("/product/");
+  const isProductPage =
+    location.pathname.startsWith("/product/") ||
+    location.pathname === paths.bioMedicalWasteBin;
   const isComingSoonPage = location.pathname === "/coming-soon";
-  const isHomePage = location.pathname === "/";
   const [showScrollTop, setShowScrollTop] = useState(false);
+  const pageSeo = getRouteSeo(location.pathname);
 
-  usePageSeo(
-    isHomePage
-      ? { title: siteMeta.title, description: siteMeta.description, path: "/" }
-      : { path: location.pathname },
-  );
+  usePageSeo(pageSeo);
 
   const scrollToTop = () => window.scrollTo(0, 0);
 
@@ -106,7 +111,9 @@ function App() {
   };
 
   const handleProductClick = (productId: string) => {
-    navigate(`/product/${productId}`);
+    const product = catalogData.products.find((p) => p.id === productId);
+    if (!product) return;
+    navigate(categoryProductUrl(product.categoryId, productId));
     window.scrollTo(0, 0);
   };
 
@@ -122,7 +129,9 @@ function App() {
   };
 
   return (
-    <div className={`page${isProductPage ? " page--product-detail" : ""}`}>
+    <div
+      className={`page${isProductPage ? " page--product-detail" : ""}${!isComingSoonPage ? " page--with-bottom-nav" : ""}`}
+    >
       {!isComingSoonPage && (
         <Header
           onHome={() => goTo("/")}
@@ -147,7 +156,7 @@ function App() {
                 <CategoryGridSection
                   categories={catalogData.categories}
                   onSelectCategory={(categoryId) => {
-                    navigate(`/category/${categoryId}`);
+                    navigate(categoryUrl(categoryId));
                     window.scrollTo(0, 0);
                   }}
                 />
@@ -164,19 +173,51 @@ function App() {
             }
           />
           <Route
+            path={paths.bioMedicalWasteBin}
+            element={
+              <ProductPage
+                productId="bio-medical-waste-bin"
+                onGetQuote={() => setShowQuoteModal(true)}
+              />
+            }
+          />
+          <Route
+            path={paths.bioMedicalWasteSolutions}
+            element={
+              <CategoryPage
+                categoryId="bio-medical-waste-solutions"
+                categories={catalogData.categories}
+                products={catalogData.products}
+                onGetQuote={() => setShowQuoteModal(true)}
+              />
+            }
+          />
+          <Route
             path="/category/:id"
             element={
               <CategoryPage
                 categories={catalogData.categories}
                 products={catalogData.products}
-                onSelectProduct={handleProductClick}
-                onSeeAll={handleSeeAllProducts}
                 onGetQuote={() => setShowQuoteModal(true)}
               />
             }
           />
+          <Route
+            path={paths.products}
+            element={
+              <ProductsPage
+                categories={catalogData.categories}
+                products={catalogData.products}
+                onSelectProduct={handleProductClick}
+                onSelectCategory={(categoryId) => {
+                  navigate(categoryUrl(categoryId));
+                  window.scrollTo(0, 0);
+                }}
+              />
+            }
+          />
           <Route path="/about" element={<AboutUsPage />} />
-          <Route path="/contact" element={<ContactPage onGetQuote={() => setShowQuoteModal(true)} />} />
+          <Route path="/contact" element={<ContactPage />} />
           <Route path={paths.privacyPolicy} element={<PrivacyPolicyPage />} />
           <Route path="/privacypolicy" element={<Navigate to={paths.privacyPolicy} replace />} />
           <Route path={paths.termsAndConditions} element={<TermsOfServicePage />} />
@@ -189,14 +230,18 @@ function App() {
         <Footer
           onHome={() => goTo("/")}
           onCatalog={handleSeeAllProducts}
-          onProducts={() => {
-            if (location.pathname === "/") {
-              handleNavToSection("solutions");
-            } else {
-              goTo("/");
-              setTimeout(() => handleNavToSection("solutions"), 150);
-            }
-          }}
+          onProducts={() => goTo(paths.products)}
+        />
+      )}
+
+      {!isComingSoonPage && (
+        <BottomNav
+          onHome={() => goTo("/")}
+          onAbout={() => goTo(paths.about)}
+          onPrivacy={() => goTo(paths.privacyPolicy)}
+          onTerms={() => goTo(paths.termsAndConditions)}
+          onProducts={() => goTo(paths.products)}
+          onContact={() => goTo(paths.contact)}
         />
       )}
 

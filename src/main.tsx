@@ -9,6 +9,18 @@ document
   .getElementById("crawlable-home-summary")
   ?.classList.add("crawlable-home-summary--mounted");
 
+document
+  .getElementById("crawlable-privacy-page")
+  ?.classList.add("crawlable-legal-page--mounted");
+
+document
+  .getElementById("crawlable-terms-page")
+  ?.classList.add("crawlable-legal-page--mounted");
+
+document
+  .getElementById("crawlable-about-page")
+  ?.classList.add("crawlable-legal-page--mounted");
+
 const rootElement = document.getElementById("root");
 
 if (!rootElement) {

@@ -19,6 +19,14 @@ import pvcCurtainImg from "./pvccurtain.png";
 import polarPvcImg from "./polarpvc.png";
 import pvcRollImg from "./pvcroll.png";
 import industrialPvcImg from "./indutrialpvc.png";
+import bmwbinsImg from "./bmwbins.png";
+import bmwfourImg from "./bmwfour.png";
+import bmwthreeImg from "./bmwthree.png";
+import bmwsharpImg from "./bmwsharp.png";
+import bmwbinsThumbImg from "./bmwbinsthumb.png";
+import bmwfourThumbImg from "./bmwfourthumb.png";
+import bmwthreeThumbImg from "./bmwthreethumb.png";
+import bmwsharpThumbImg from "./bmwsharpthumb.png";
 
 export const assets = {
     pedal: [pedalone, pedaltwo, pedalthree],
@@ -33,6 +41,15 @@ export const assets = {
     polarpvc: [polarPvcImg],
     pvcroll: [pvcRollImg],
     industrialpvc: [industrialPvcImg],
+    biomedicalwastebin: [bmwbinsImg],
+    bmwbins: [bmwbinsImg],
+    bmwfour: [bmwfourImg],
+    bmwthree: [bmwthreeImg],
+    bmwsharp: [bmwsharpImg],
+    bmwbinsthumb: [bmwbinsThumbImg],
+    bmwfourthumb: [bmwfourThumbImg],
+    bmwthreethumb: [bmwthreeThumbImg],
+    bmwsharpthumb: [bmwsharpThumbImg],
 };
 
 export type AssetName = keyof typeof assets;

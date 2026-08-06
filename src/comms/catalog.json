@@ -194,6 +194,19 @@
       ],
       "lead": "Lead time: 3-5 days; custom sizes on quote",
       "availability": "Wholesale and custom orders welcome"
+    },
+    {
+      "id": "bio-medical-waste-solutions",
+      "name": "Bio Medical Waste Solutions",
+      "tagline": "We are a leading Wholesale Trader, Dealer, and Supplier of HDPE Bio Medical Waste Bins, Bio Medical Waste Bin Trolleys, Bio Medical Waste Bins, and Biomedical Sharps Containers from Bengaluru, India, offering premium-quality products at competitive wholesale prices.",
+      "items": [
+        "Bio medical waste bins (foot-pedal & swing lid)",
+        "Color-coded lids — yellow, red, blue, white",
+        "Stainless steel & ABS biohazard containers",
+        "BMW Rules compliant segregation bins"
+      ],
+      "lead": "Lead time: 3-5 days for standard orders",
+      "availability": "Wholesale pricing for hospitals, clinics & labs"
     }
   ],
   "products": [
@@ -1122,6 +1135,111 @@
       ],
       "minimumOrder": 1,
       "imagename": "industrialpvc"
+    },
+    {
+      "id": "bio-medical-waste-bin",
+      "name": "Bio Medical Waste Bins",
+      "categoryId": "bio-medical-waste-solutions",
+      "price": 950,
+      "capacity": "10L, 15L, 20L, 30L,45L,60L etc.",
+      "material": "ABS / Polypropylene",
+      "color": "Yellow / Red / Blue / Black (color-coded)",
+      "structure": "Foot Pedal with Hinged Lid",
+      "usage": "Hospitals, Clinics, Laboratories, Diagnostic Centres",
+      "size": "10L, 15L, 20L, 30L,45L,60L etc.",
+      "grade": "BMW Rules compliant",
+      "finish": "Durable molded plastic with biohazard marking",
+      "description": "Color-coded bio medical waste bins designed for safe segregation and disposal of hospital and laboratory waste as per Biomedical Waste Management Rules. Available in yellow, red, blue, and black with biohazard infectious waste marking. Foot-pedal operation for hands-free use and hinged lid for secure containment. Ideal for OPD, wards, OT, labs, and diagnostic centres.",
+      "features": [
+        "Color-coded bins for BMW waste segregation",
+        "Biohazard infectious waste marking",
+        "Foot-pedal hands-free operation",
+        "Hinged lid for secure containment",
+        "BMW Rules compliant design",
+        "Available in multiple capacities",
+        "Suitable for hospitals, clinics & laboratories"
+      ],
+      "minimumOrder": 4,
+      "imagename": "bmwbins",
+      "thumbname": "bmwbinsthumb"
+    },
+    {
+      "id": "bmw-four-bin-trolley",
+      "name": "Four Bin Bio Medical Waste Trolley",
+      "categoryId": "bio-medical-waste-solutions",
+      "price": 12350,
+      "capacity": "4 × pedal bins on mobile trolley",
+      "material": "Stainless Steel trolley with ABS bins",
+      "color": "Green / Yellow / Red / Blue",
+      "structure": "Mobile trolley with caster wheels & push handle",
+      "usage": "Hospitals, Clinics, Wards, Laboratories",
+      "size": "4-bin trolley set",
+      "grade": "BMW Rules compliant",
+      "finish": "Polished stainless steel frame",
+      "description": "Four-bin bio medical waste trolley with color-coded pedal bins (green, yellow, red, blue) mounted on a stainless steel mobile cart. Ideal for hospital wards and clinical areas needing segregated BMW collection on the move. Equipped with caster wheels and push handle for easy transport.",
+      "features": [
+        "Four color-coded BMW pedal bins",
+        "Stainless steel mobile trolley",
+        "Caster wheels with push handle",
+        "Hands-free foot-pedal lids",
+        "BMW Rules compliant segregation",
+        "Suitable for wards & clinical floors"
+      ],
+      "minimumOrder": 1,
+      "imagename": "bmwfour",
+      "thumbname": "bmwfourthumb"
+    },
+    {
+      "id": "bmw-three-bin-trolley",
+      "name": "Three Bin Bio Medical Waste Trolley",
+      "categoryId": "bio-medical-waste-solutions",
+      "price": 9650,
+      "capacity": "3 × pedal bins on mobile trolley",
+      "material": "Stainless Steel trolley with ABS bins",
+      "color": "Red / Yellow / Blue",
+      "structure": "Mobile trolley with caster wheels & push handle",
+      "usage": "Hospitals, Clinics, OT, Laboratories",
+      "size": "3-bin trolley set",
+      "grade": "BMW Rules compliant",
+      "finish": "Polished stainless steel frame",
+      "description": "Three-bin bio medical waste trolley with red, yellow, and blue color-coded pedal bins on a stainless steel mobile cart. Lids marked for infectious waste categories including non-sharps, glass, and metal. Designed for hospital and clinical waste segregation on the move.",
+      "features": [
+        "Three color-coded BMW pedal bins",
+        "Lid markings for waste categories",
+        "Stainless steel mobile trolley",
+        "Caster wheels with push handle",
+        "Hands-free foot-pedal lids",
+        "BMW Rules compliant segregation"
+      ],
+      "minimumOrder": 1,
+      "imagename": "bmwthree",
+      "thumbname": "bmwthreethumb"
+    },
+    {
+      "id": "bmw-sharps-container",
+      "name": "Bio Medical Waste Sharps Container",
+      "categoryId": "bio-medical-waste-solutions",
+      "price": 210,
+      "capacity": "5L",
+      "material": "Puncture-resistant polypropylene",
+      "color": "Yellow / Red / Translucent",
+      "structure": "Secure-fit lid with side handles",
+      "usage": "Hospitals, Clinics, Laboratories, Phlebotomy",
+      "size": "5L",
+      "grade": "BMW Rules / CE compliant",
+      "finish": "Puncture-resistant molded body",
+      "description": "Puncture-resistant sharps containers for safe disposal of needles, syringes, and other sharp bio-medical waste. Available in yellow, red, and translucent options with secure-fit lids, biohazard labelling, and 5L capacity. Suitable for hospitals, clinics, labs, and phlebotomy stations.",
+      "features": [
+        "Puncture-resistant sharps container",
+        "5L capacity with secure-fit lid",
+        "Biohazard labelling for sharp waste",
+        "Available in yellow, red & translucent",
+        "Side handles for safe handling",
+        "CE / BMW Rules compliant"
+      ],
+      "minimumOrder": 10,
+      "imagename": "bmwsharp",
+      "thumbname": "bmwsharpthumb"
     }
   ]
 }

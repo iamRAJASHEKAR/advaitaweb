@@ -39,7 +39,7 @@ type CatalogJson = {
   industries: Industry[];
   processSteps: ProcessStep[];
   categories: ProductCategory[];
-  products: Omit<Product, "images">[];
+  products: Omit<Product, "images" | "thumb">[];
 };
 
 const catalog = catalogJson as CatalogJson;
@@ -64,6 +64,9 @@ export const catalogData = {
       images: product.imagename
         ? assets[product.imagename]
         : [getProductImage(product.id)],
+      thumb: product.thumbname
+        ? assets[product.thumbname][0]
+        : undefined,
     }),
   ),
 };

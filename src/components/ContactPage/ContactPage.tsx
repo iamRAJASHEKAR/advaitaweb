@@ -1,13 +1,13 @@
 import "../PrivacyPolicyPage/PrivacyPolicyPage.css";
 import "./ContactPage.css";
+import { Link } from "react-router-dom";
 import { strings } from "../../comms/strings";
+import { paths } from "../../routes/paths";
+import { CompanyFactsheet } from "../CompanyFactsheet/CompanyFactsheet";
 import { GetDirectionsLink } from "../GetDirectionsLink/GetDirectionsLink";
+import { ContactForm } from "../Forms/ContactForm";
 
-type ContactPageProps = {
-  onGetQuote?: () => void;
-};
-
-export function ContactPage({ onGetQuote }: ContactPageProps) {
+export function ContactPage() {
   const whatsappUrl = `https://wa.me/${strings.header.phone.replace(/\D/g, "")}`;
 
   return (
@@ -29,15 +29,36 @@ export function ContactPage({ onGetQuote }: ContactPageProps) {
         </header>
 
         <div className="privacy-policy__content">
+          <section className="privacy-policy__section contact-page__form-section">
+            <h2>{strings.contactPage.formHeading}</h2>
+            <p>{strings.contactPage.formBody}</p>
+            <ContactForm />
+            <div className="contact-page__actions contact-page__actions--secondary">
+              <a
+                className="btn btn--whatsapp"
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {strings.closing.whatsappCta}
+              </a>
+            </div>
+          </section>
+
+          <section className="privacy-policy__section">
+            <CompanyFactsheet variant="compact" />
+            <p>
+              <Link to={paths.about}>View full company profile</Link>
+            </p>
+          </section>
+
           <section className="privacy-policy__section">
             <h2>Business contact</h2>
             <div className="privacy-policy__contact">
               <p>
                 <strong>{strings.company.legalName}</strong>
                 <br />
-                {strings.company.gstLabel} {strings.company.gstNumber}
-                <br />
-                {strings.company.cinLabel} {strings.company.cinNumber}
+                CEO: {strings.companyProfile.companyCeo}
               </p>
               <p>
                 <strong>Address</strong>
@@ -65,29 +86,6 @@ export function ContactPage({ onGetQuote }: ContactPageProps) {
           <section className="privacy-policy__section">
             <h2>{strings.businessOverview.serviceAreaHeading}</h2>
             <p>{strings.company.serviceArea}</p>
-          </section>
-
-          <section className="privacy-policy__section">
-            <h2>Request a quote</h2>
-            <p>
-              Share your product list and quantities for a wholesale quotation. Pricing is confirmed in
-              writing before order placement.
-            </p>
-            <div className="contact-page__actions">
-              {onGetQuote ? (
-                <button type="button" className="btn btn--primary" onClick={onGetQuote}>
-                  {strings.closing.primaryCta}
-                </button>
-              ) : null}
-              <a
-                className="btn btn--whatsapp"
-                href={whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {strings.closing.whatsappCta}
-              </a>
-            </div>
           </section>
         </div>
       </div>
